@@ -4,7 +4,7 @@
   <subtitle><![CDATA[一个逼格的程序猿、码农。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://liushaojun.github.io/"/>
-  <updated>2015-12-02T12:26:27.000Z</updated>
+  <updated>2015-12-03T14:42:53.000Z</updated>
   <id>http://liushaojun.github.io/</id>
   
   <author>
@@ -13,6 +13,78 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[简单美观的文字标签云组件]]></title>
+    <link href="http://liushaojun.github.io/2015/12/03/beautiful-word-cloud/"/>
+    <id>http://liushaojun.github.io/2015/12/03/beautiful-word-cloud/</id>
+    <published>2015-12-03T14:10:40.000Z</published>
+    <updated>2015-12-03T14:42:53.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="简单美观的文字标签云组件">简单美观的文字标签云组件</h1><p>  </p>
+  <div class="entry">
+
+<p>经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用office一样制作信息图（infographic），而不是用专业的制图工具。这一步跨过去，看到的将是欣欣向荣的真正大数据时代。</p>
+<p>而这之前，首先缺少的就是，可以让普通开发人员使用的大数据时代的可视化图表组件，比如标签云图，所幸，业界已经有<a href="http://github.com/ecomfe/echarts" target="_blank" rel="external">ECharts</a>和<a href="http://github.com/timdream/wordcloud" target="_blank" rel="external">WordCloud</a>这两大利器，本文只介绍后者。</p>
+<p><img src="http://bruce.u.qiniudn.com/2014/02/10/wordcloud-cn.jpg" alt="中文"></p>
+<p><a id="more"></a></p>
+<p>首先页面必须是html5编写。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">“UTF-8”</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="title">body</span>&gt;</span>    </span><br><span class="line"> <span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>引入<a href="http://jquery.com/" target="_blank" rel="external">jQuery</a>和<a href="http://github.com/timdream/wordcloud2.js" target="_blank" rel="external">WordCloud2.js</a>。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">“src/wordcloud2.js”</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">“//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js”</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>定义canvas容器。</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">&lt;<span class="tag">div</span> id=<span class="string">“canvas-container”</span> align=<span class="string">“center”</span>&gt;</span><br><span class="line"> &lt;<span class="tag">canvas</span> id=<span class="string">“canvas”</span> <span class="attribute">width</span>=<span class="string">“800px”</span> <span class="attribute">height</span>=<span class="string">“600px”</span>&gt;&lt;/canvas&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>绘图。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="prolog"> </span><br><span class="line"><span class="atom">var</span> <span class="atom">options</span> = <span class="atom">eval</span>(&#123;</span><br><span class="line">  <span class="string">“list”</span>: [[<span class="string">‘傻猎豹’</span>, <span class="number">10</span>], [<span class="string">‘不如’</span>, <span class="number">9</span>], [<span class="string">‘麻花疼’</span>, <span class="number">7</span>], [<span class="string">‘麻云’</span>, <span class="number">6</span>],[<span class="string">‘李眼红’</span>, <span class="number">4</span>], [<span class="string">‘雷布斯’</span>, <span class="number">5</span>],[<span class="string">‘周红衣’</span>, <span class="number">4</span>],[<span class="string">‘刘墙洞’</span>, <span class="number">3</span>],[<span class="string">‘李国情’</span>, <span class="number">3</span>]],</span><br><span class="line">  <span class="string">“gridSize”</span>: <span class="number">8</span>,</span><br><span class="line">  <span class="string">“weightFactor”</span>: <span class="number">16</span>,</span><br><span class="line">  <span class="string">“fontFamily”</span>: <span class="string">‘Hiragino Mincho Pro, serif’</span>,</span><br><span class="line">  <span class="string">“color”</span>: <span class="string">‘random-dark’</span>,</span><br><span class="line">  <span class="string">“backgroundColor”</span>: <span class="string">‘#f0f0f0’</span>,</span><br><span class="line">  <span class="string">“rotateRatio”</span>: <span class="number">0</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="atom">var</span> <span class="atom">canvas</span> = <span class="atom">document</span>.<span class="atom">getElementById</span>(<span class="string">‘canvas’</span>);</span><br><span class="line"></span><br><span class="line"><span class="name">WordCloud</span>(<span class="atom">canvas</span>, <span class="atom">options</span>);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure><br>&gt; 至此，全部完毕。执行页面，美丽的云图便展现在你面前，具体的API可以参考<a href="http://github.com/timdream/wordcloud2.js/blob/master/API.md" target="_blank" rel="external">这里</a>。<br><br>下面举个英文的例子，为了美观稍微改变一下参数：<br><br><figure class="highlight prolog"><table><tr><td class="code"><pre><span class="line"><span class="string">“list”</span>: [[<span class="string">‘bruce-sha’</span>, <span class="number">10</span>], [<span class="string">‘buru’</span>, <span class="number">9</span>], [<span class="string">‘tencent’</span>, <span class="number">7</span>], [<span class="string">‘alibaba’</span>, <span class="number">6</span>], [<span class="string">‘baidu’</span>, <span class="number">4</span>], [<span class="string">‘xiaomi’</span>, <span class="number">5</span>],[<span class="string">‘360’</span>, <span class="number">4</span>],[<span class="string">‘jingdong’</span>, <span class="number">3</span>],[<span class="string">‘dangdang’</span>, <span class="number">3</span>],[<span class="string">‘ibruce.info’</span>, <span class="number">1</span>]],</span><br><span class="line"><span class="string">“gridSize”</span>: <span class="number">16</span>,</span><br><span class="line"><span class="string">“weightFactor”</span>: <span class="number">16</span>,</span><br><span class="line"><span class="string">“fontFamily”</span>: <span class="string">‘Times, serif’</span>,</span><br><span class="line"><span class="string">“color”</span>: <span class="string">‘random-light’</span>,</span><br><span class="line"><span class="string">“backgroundColor”</span>: <span class="string">‘#333’</span>,</span><br><span class="line"><span class="string">“rotateRatio”</span>: <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="http://bruce.u.qiniudn.com/2014/02/10/wordcloud-en.jpg" alt="英文"></p>
+<p></p>
+<!-- wumii Button BEGIN -->
+<div style="margin:0px auto; padding-left:23px; text-align:center;">
+
+<pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">id</span>=<span class="value">"wumiiRelatedItems"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="actionscript">
+    <span class="keyword">var</span> wumiiPermaLink = <span class="string">"http://ibruce.info/2014/02/10/the-most-beautiful-word-cloud/"</span>; <span class="comment">//请用代码生成文章永久的链接</span>
+    <span class="keyword">var</span> wumiiTitle = <span class="string">"简单美观的文字标签云组件"</span>; <span class="comment">//请用代码生成文章标题</span>
+    <span class="keyword">var</span> wumiiTags = <span class="string">"big data, javascript, word cloud"</span>; <span class="comment">//请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"</span>
+    <span class="keyword">var</span> wumiiCategories = [<span class="string">"big data"</span>]; <span class="comment">//请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]</span>
+    <span class="keyword">var</span> wumiiSitePrefix = <span class="string">"http://ibruce.info/"</span>;
+    <span class="keyword">var</span> wumiiParams = <span class="string">"&amp;num=5&amp;mode=3&amp;pf=JAVASCRIPT"</span>;
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://widget.wumii.cn/ext/relatedItemsWidget"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="comment">&lt;!--
+[
+    ![无觅关联推荐，快速提升流量](http://static.wumii.cn/images/pixel.png)
+](http://www.wumii.com/widget/relatedItems)
+--&gt;</span>
+</code></pre><p></p></div><br><!-- wumii Button END --><p></p>
+<!-- UJian Button BEGIN -->
+<pre><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"ujian-hook"</span> <span class="attribute">style</span>=<span class="value">"padding-left: 17px;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="actionscript"><span class="keyword">var</span> ujian_config = {num:<span class="number">6</span>,picSize:<span class="number">83</span>,textHeight:<span class="number">45</span>};</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://v1.ujian.cc/code/ujian.js?uid=1893018"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><!-- UJian Button END -->
+<!-- baidu tuijian BEGIN -->
+<!-- <div id="hm_t_22763"></div> -->
+<!-- baidu tuijian BEGIN -->
+<!--    <div style="padding-left: 17px;"> -->
+<!--        <script src="http://wm.lrswl.com/page/s.php?s=103186&w=640&h=60"></script> -->
+<!--    </div> --></div>]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="简单美观的文字标签云组件">简单美观的文字标签云组件</h1><p>  </p>
+  <div class="entry">
+
+<p>经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用]]>
+    </summary>
+    
+      <category term="WordCloud" scheme="http://liushaojun.github.io/tags/WordCloud/"/>
+    
+      <category term="javascript" scheme="http://liushaojun.github.io/tags/javascript/"/>
+    
+      <category term="前端" scheme="http://liushaojun.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
