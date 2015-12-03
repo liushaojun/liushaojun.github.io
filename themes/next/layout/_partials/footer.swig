@@ -22,7 +22,7 @@
 {% block footer %}{% endblock %}
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <br>
-Total <span id="busuanzi_value_site_pv"></span> views.
+Total <span id="busuanzi_value_site_pv"></span> views. | 
 您是 @{{ config.title }} 的第<span id="busuanzi_value_site_uv"></span>个小伙伴
 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Hits
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
