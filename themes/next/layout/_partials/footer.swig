@@ -12,18 +12,23 @@
   {{ __('footer.powered', '<a class="theme-link" href="http://hexo.io">Hexo</a>') }}
 </div>
 
-<div class="theme-info">
+<div class="{% if theme.counter %} powered-by {% else %} theme-info {% endif%} ">
   {{ __('footer.theme') }} -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT{% if theme.scheme %}.{{ theme.scheme }}{% endif %}
+    NexT{% if theme.scheme %}.{{ theme.scheme }}{% endif  %}
   </a>
 </div>
 
-{% block footer %}{% endblock %}
+{% if theme.counter %}
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<br>
-Total <span id="busuanzi_value_site_pv"></span> views. | 
-您是 @{{ config.title }} 的第<span id="busuanzi_value_site_uv"></span>个小伙伴
-<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Hits
+<div class="powered-by">
+  本站总访问量 <span id="busuanzi_value_site_pv"></span> 次.
+</div>
+<div class="theme-info">
+  本站访客 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 人次.
+</div>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
+{% endif %}
+{% block footer %}{% endblock %}
+
