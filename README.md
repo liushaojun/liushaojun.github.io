@@ -3,11 +3,12 @@
 ## Git  
 > 我的一次使用Git，不知踩了多少吭。只有踩过更多的吭才会想方设法的去填玩这些坑。
 > 接下来给大家分享一下我是怎么一步一步填满这些吭的
+
 1. Git push 
 2. Git pull
 > If you wish to set tracking information for this branch 				      you can do so with
-> ![](./0A806D56-E0AA-48B3-943C-F2AF9E1B5ADE.png)
 
+ ![](http://liushaojun.github.io/images/0A806D56-E0AA-48B3-943C-F2AF9E1B5ADE.png)
 	    git branch --set-upstream master origin<branch>
 		看到第二个提示，我现在知道了一种解决方案。也就是指定当前的工作目录工作分支，	跟远程的仓库，分支之前的链接关系
 		比如我们设置master 对应远程仓库的master 分支
@@ -17,3 +18,5 @@
 		`git pull origin master`
 		
 3. Git commit
+
+
