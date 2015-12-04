@@ -8,8 +8,9 @@ tags: [nodeJs, javascript, swig]
 ## API
 
 1. 初始化
-    ``` javascript
-        swig.init({
+
+```  javascript
+ swig.init({
           allowErrors: false,   
           autoescape: true,
           cache: true,
@@ -19,21 +20,21 @@ tags: [nodeJs, javascript, swig]
           tags: {},
           extensions: {},
           tzOffset: 0
-        });
-    ```
-> options
-> allowErrors: 
-    默认值为 false。将所有模板解析和编译错误直接输出到模板。如果为 true，则将引发错误，抛出到 Node.js 进程中，可能会使您的应用程序崩溃。
-    autoescape: 
+     });
+```
+2. options
+   - allowErrors: 
+     默认值为 false。将所有模板解析和编译错误直接输出到模板。如果为 true，则将引发错误，抛出到 Node.js 进程中，可能会使您的应用程序崩溃。
+    - autoescape: 
     默认true，强烈建议保持。字符转换表请参阅转义过滤器。
     true: HTML安全转义 
     false: 不转义，除非使用转义过滤器或者转义标签 
     'js': js安全转义
-    cache: 
+    - cache: 
     更改为 false 将重新编译每个请求的模板的文件。正式环境建议保持true。
-    encoding 
+    - encoding 
     模板文件编码
-    root 
+    - root 
     需要搜索模板的目录。如果模板传递给 swig.compileFile 绝对路径(以/开头)，Swig不会在模板root中搜索。如果传递一个数组，使用第一个匹配成功的数组项。
     tzOffset 
     设置默认时区偏移量。此设置会使转换日期过滤器会自动的修正相应时区偏移量。
@@ -42,34 +43,38 @@ tags: [nodeJs, javascript, swig]
     自定义标签或者重写默认标签，参见自定义标签指南。
     extensions 添加第三方库，可以在编译模板时使用，参见参见自定义标签指南。
 
-2. NodeJs
-    ``` javascript
+3. NodeJs
+
+   ``` javascript
     var tpl = swig.compileFile("path/to/template/file.html");
     var renderedHtml = tpl.render({ vars: 'to be inserted in template' });
-    ```
+   ```
     or 
+    
     ``` javascript
     var tpl = swig.compile("Template string here");
     var renderedHtml = tpl({ vars: 'to be inserted in template' });
     ```
 Express
+
     ``` bash
         $ npm install express
         $ npm install consolidate
     ```
 Then 
+
     ``` javascript
        app.engine('.html', cons.swig);
        app.set('view engine', 'html');
     ```
   
-3. 浏览器
+4. 浏览器
     > Swig浏览器版本的api基本与nodejs版相同，不同点如下：
-    不能使用swig.compileFile，浏览器没有文件系统
-    你必须提前使用swig.compile编译好模板
-    按顺序使用extends, import, and include，同时在swig.compile里使用参数templateKey来查找模板
+    不能使用`swig.compileFile`，浏览器没有文件系统
+    你必须提前使用`swig.compile`编译好模板
+    按顺序使用`extends`, `import`, and `include`，同时在`swig.compile`里使用参数`templateKey`来查找模板
     
-    ``` javascript
+    ``` 
     var template = swig.compile('<p>{% block content %}{% endblock %}</p>', { filename: 'main' });
                 var mypage = swig.compile('{% extends "main" %}
                         {% block content %}
@@ -78,25 +83,23 @@ Then
                  { filename: 'mypage' });
 
     ```
-4.  基础
-    1. 变量
+5.  基础
+    + 变量
          `{{ foo.bar }}`
-        `{{ foo['bar'] }}`
-    如果变量未定义，输出空字符。变量可以通过过滤器来修改：
-    `{{ name|title }}` was born on `{{ birthday|date('F jS, Y') }}`
-  
-    ``` javascript
-        // Jane was born on July 6th, 1985
-    ```
-
-  2. 逻辑标签
-    > 参见[标签](#tag)部分。
+           `{{ foo['bar'] }}`
+       > 如果变量未定义，输出空字符。变量可以通过过滤器来修改：
+        `\{\{ name|title \}\}` was born on `{ { birthday|date('F jS, Y') } }`
+      
+      ``` javascript
+          // Jane was born on July 6th, 1985
+      ```
+  + 逻辑标签  参见[标签](#tag)部分。
 
   #### 注释
   #### 空白
   > 模板里的空白在最终输出时默认保留，如果需要去掉空白，可以在逻辑标签前后加上空白控制服-：
   
-  ``` 
+  ``` javascript
   {% for item in seq -%}
       {{ item }}
   {%- endfor %}
@@ -105,52 +108,51 @@ Then
   ### 模板继承
   > Swig 使用 extends 和 block 来实现模板继承
   
-  ``` html
-  layout.html
-  
-  <!doctype html>
-  <html>
-  <head>
-      <meta charset="utf-8">
-      <title>{% block title %}My Site{% endblock %}</title>
-  
+    ``` html
+    layout.html
+    
+    <!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}My Site{% endblock %}</title>
+    
+        {% block head %}
+            <link rel="stylesheet" href="main.css">
+        {% endblock %}
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+    </html>
+      `index.html`
+      {% extends 'layout.html' %}
+      
+      {% block title %}My Page{% endblock %}
+      
       {% block head %}
-          <link rel="stylesheet" href="main.css">
+      {% parent %}
+          <link rel="stylesheet" href="custom.css">
       {% endblock %}
-  </head>
-  <body>
-      {% block content %}{% endblock %}
-  </body>
-  </html>
-  index.html
-  
-  {% extends 'layout.html' %}
-  
-  {% block title %}My Page{% endblock %}
-  
-  {% block head %}
-  {% parent %}
-      <link rel="stylesheet" href="custom.css">
-  {% endblock %}
-  
-  {% block content %}
-      <p>This is just an awesome page.</p>
-  {% endblock %}
+      
+      {% block content %}
+          <p>This is just an awesome page.</p>
+      {% endblock %}
   ```
 
-  ### 变量过滤器
-  > 用于修改变量。变量名称后用 | 字符分隔添加过滤器。您可以添加多个过滤器。
+### 变量过滤器
+> 用于修改变量。变量名称后用 | 字符分隔添加过滤器。您可以添加多个过滤器。
 
   Example
   
-  ```
-  {{ name|title }} was born on {{ birthday|date('F jS, Y') }}
-  and has {{ bikes|length|default("zero") }} bikes.
+  ```js
+    {{ name|title }} was born on {{ birthday|date('F jS, Y') }}
+    and has {{ bikes|length|default("zero") }} bikes.
   ```
   
   > 也可以使用 filter 标签来为块内容添加过滤器
   
-  ```
+  ```   
   {% filter upper %}oh hi, paul{% endfilter %}
   ```
 
@@ -212,8 +214,8 @@ Then
   };
   ```
   > 你的 `filter `一旦被引入，你就可以向下面一样使用：
-  `{{ name|myfilter }}`
-  `{% filter myfilter %}I shall be filtered{% endfilter %}`
+  `{ { name|myfilter } }`
+  `{ % filter myfilter % }I shall be filtered{ % endfilter % }`
    你也可以像下面一样给 filter 传参数：
   
   ```
@@ -222,81 +224,77 @@ Then
   };
   ```
 
-`{{ name|prefix('my prefix') }}`
+`{ { name|prefix('my prefix') } }`
 
-`{% filter prefix 'my prefix' %}I will be prefixed with "my prefix".{% endfilter %}`
-`{% filter prefix foo %}`I will be prefixed with the value stored to `foo`.`{% endfilter %}`
+`{ % filter prefix 'my prefix' %}I will be prefixed with "my prefix".{ % endfilter % }`
+`{ % filter prefix foo % }`I will be prefixed with the value stored to `foo`.`{ % endfilter % }`
 
 ## <a id="tag" href=":;">标签</a>
-
 ### 内置标签
 
 - extends 
-> 使当前模板继承父模板，必须在文件最前
+使当前模板继承父模板，必须在文件最前
   - 参数： 
   -  file: 
-  > 父模板相对模板 root 的相对路径
+  父模板相对模板 root 的相对路径
 - block 
-> 定义一个块，使之可以被继承的模板重写，或者重写父模板的同名块
+定义一个块，使之可以被继承的模板重写，或者重写父模板的同名块
   - 参数： 
   - name: 
-  > 块的名字，必须以字母数字下划线开头
+  块的名字，必须以字母数字下划线开头
 - parent 
-> 将父模板中同名块注入当前块中
+将父模板中同名块注入当前块中
 - include 
-> 包含一个模板到当前位置，这个模板将使用当前上下文
+包含一个模板到当前位置，这个模板将使用当前上下文
   - 参数： 
   - file: 
-> >包含模板相对模板 root 的相对路径 
+包含模板相对模板 root 的相对路径 
 - ignore missing: 
->包含模板不存在也不会报错 
+包含模板不存在也不会报错 
 - with x: 
-> 设置 x 至根上下文对象以传递给模板生成。必须是一个键值对 
+设置 x 至根上下文对象以传递给模板生成。必须是一个键值对 
 - only: 
-> 限制模板上下文中用 with x 定义的参数
+限制模板上下文中用 with x 定义的参数
 
 ```javascript
-{% include template_path %}
-{% include "path/to/template.js" %} 
+{ % include template_path % }
+{ % include "path/to/template.js" % } 
 //你可以标记 ignore missing，这样如果模板不存在，也不会抛出错误
-{% include "foobar.html" ignore missing %}
+{ % include "foobar.html" ignore missing % }
 //本地声明的上下文变量，默认情况不会传递给包含的模板。例如以下情况，inc.html 无法得到 foo 和 bar
 {% set foo = "bar" %}
-{% include "inc.html" %}
+{ % include "inc.html" % }
 
-{% for bar in thing %}
-    {% include "inc.html" %}
+  {% for bar in thing %}
+   { % include "inc.html" % }
 {% endfor %}
 //如果想把本地声明的变量引入到包含的模板种，可以使用 with 参数来把后面的对象创建到包含模板的上下文中
 {% set foo = { bar: "baz" } %}
-{% include "inc.html" with foo %}
+{ % include "inc.html" with foo % }
 
 {% for bar in thing %}
-    {% include "inc.html" with bar %}
+    { % include "inc.html" with bar % }
 {% endfor %}    
 ```
 
 
->  如果当前上下文中 foo 和 bar 可用，下面的情况中，只有 foo 会被 inc.html 定义
-`{% include "inc.html" with foo only %}`
+> 如果当前上下文中 foo 和 bar 可用，下面的情况中，只有 foo 会被 inc.html 定义
+`{ %  `include` "inc.html" with foo only % }`
 `only` 
-> 必须作为最后一个参数，放在其他位置会被忽略
+  必须作为最后一个参数，放在其他位置会被忽略
 **raw** 
->停止解析标记中任何内容，所有内容都将输出
-参数： 
+  停止解析标记中任何内容，所有内容都将输出
+参数:
 **file:** 
-父模板相对模板 root 的相对路径
+   父模板相对模板 root 的相对路径
 **for** 
-> 遍历对象和数组
->> 参数： 
-  - **x:** 
-  当前循环迭代名 
-  - **in:** 
-  语法标记 
-  - **y:** 
-> 可迭代对象。可以使用过滤器修改
+   遍历对象和数组
+参数:
+    x: 当前循环迭代名 
+   in: 语法标记 
+    y: 可迭代对象。可以使用过滤器修改
 
-```
+``` js
 {% for x in y %}
     {% if loop.first %}<ul>{% endif %}
     <li>{{ loop.index }} - {{ loop.key }}: {{ x }}</li>
@@ -313,6 +311,7 @@ Then
   loop.first：如果是第一个值返回 true 
   loop.last：如果是最后一个值返回 true 
   loop.cycle：一个帮助函数，以指定的参数作为周期
+  
 ``` html
 {% for item in items %}
     <li class="{{ loop.cycle('odd', 'even') }}">{{ item }}</li>
@@ -328,7 +327,7 @@ Then
 `if` 条件语句 
 > 参数：  接受任何有效的 JavaScript 条件语句，以及一些其他人类可读语法
 
-```
+```js
   {% if x %}{% endif %}
   {% if !x %}{% endif %}
   {% if not x %}{% endif %}
@@ -364,15 +363,13 @@ else 和 else if
 ```
 
 `autoescape`  改变当前变量的自动转义行为
+
  参数： 
-  on: 
-  当前内容是否转义 
-  type: 
-  转义类型，js 或者 html，默认 html
-  假设
-  some_html_output = '<p>Hello "you" & \'them\'</p>';
-  然后
-```
+  - on:当前内容是否转义
+  - type: 转义类型，js 或者 html，默认 html
+  -  假设 some_html_output = '<p>Hello "you" & \'them\'</p>';
+ 
+``` js
 {% autoescape false %}
     {{ some_html_output }}
 {% endautoescape %}
@@ -395,11 +392,8 @@ else 和 else if
 
 `set ` 设置一个变量，在当前上下文中复用
 > 参数： 
-name: 
-变量名 =: 
-语法标记 
-value: 
-变量值
+`name`: 变量名 =: 语法标记 
+`value`: 变量值
 
 ```
 {% set foo = [0, 1, 2, 3, 4, 5] %}
@@ -460,25 +454,33 @@ as:
 > 过滤器名字 ... : 
 若干传给过滤器的参数 父模板相对模板 root 的相对路径
 
-``` html
-{% filter uppercase %}oh hi, {{ name }}{% endfilter %}
-{% filter replace "." "!" "g" %}Hi. My name is Paul.{% endfilter %}
+``` swig
+{% filter uppercase % }oh hi, {{ name }}{ % endfilter % }
+{% filter replace "." "!" "g" % }Hi. My name is Paul.{ % endfilter % }
+```
 输出
-OH HI, PAUL
-Hi! My name is Paul!
-spaceless 
-尝试移除html标签间的空格
+`// OH HI, PAUL
+// Hi! My name is Paul!`
+`//spaceless `
+//尝试移除html标签间的空格
+
+``` swig
 {% spaceless %}
 {% for num in foo %}
     <li>{{ loop.index }}</li>
 {% endfor %}
 {% endspaceless %}
-输出
+
 ```
+
 
 ``` html
 <li>1</li><li>2</li><li>3</li>
 ```
+
+> 注意： 这里面为了一些标签和函数避免解析时报错，所以我修改了下。请用的时候记得修复它 ，谢谢！
+
+
 
 
 
