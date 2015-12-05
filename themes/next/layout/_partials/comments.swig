@@ -5,7 +5,8 @@
     <blockquote>
     <p>最近访客</p>
     </blockquote>
-    <ul class="ds-recent-visitors"></ul>  
+    <ul class="ds-recent-visitors" data-num-items="36" data-avatar-size="30" id="ds-recent-visitors">
+    </ul>  
       <div class="ds-thread" data-thread-key="{{ page.path }}"
            data-title="{{ page.title }}" data-url="{{ page.permalink }}">
       </div>
