@@ -4,7 +4,7 @@
   <subtitle><![CDATA[一个逼格的程序猿、码农。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://liushaojun.github.io/"/>
-  <updated>2015-12-05T06:33:21.000Z</updated>
+  <updated>2015-12-05T06:45:57.000Z</updated>
   <id>http://liushaojun.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://liushaojun.github.io/2015/12/04/Swig-%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/"/>
     <id>http://liushaojun.github.io/2015/12/04/Swig-模版教程/</id>
     <published>2015-12-04T03:29:52.000Z</published>
-    <updated>2015-12-05T06:33:21.000Z</updated>
+    <updated>2015-12-05T06:45:57.000Z</updated>
     <content type="html"><![CDATA[<h1 id="让我们开始使用_Swig_模版吧！">让我们开始使用 Swig 模版吧！</h1><hr>
 <h2 id="API">API</h2><ol>
 <li><p>初始化</p>
@@ -31,38 +31,38 @@
 <li>autoescape:<br>默认true，强烈建议保持。字符转换表请参阅转义过滤器。<br>true: HTML安全转义<br>false: 不转义，除非使用转义过滤器或者转义标签<br>‘js’: js安全转义</li>
 <li>cache:<br>更改为 false 将重新编译每个请求的模板的文件。正式环境建议保持true。</li>
 <li>encoding<br>模板文件编码</li>
-<li>root<br>需要搜索模板的目录。如果模板传递给 swig.compileFile 绝对路径(以/开头)，Swig不会在模板root中搜索。如果传递一个数组，使用第一个匹配成功的数组项。<br>tzOffset<br>设置默认时区偏移量。此设置会使转换日期过滤器会自动的修正相应时区偏移量。<br>filters 自定义过滤器或者重写默认过滤器，参见自定义过滤器指南。<br>tags<br>自定义标签或者重写默认标签，参见自定义标签指南。<br>extensions 添加第三方库，可以在编译模板时使用，参见参见自定义标签指南。</li>
+<li>root<br>需要搜索模板的目录。如果模板传递给 swig.compileFile 绝对路径(以/开头)，Swig不会在模板root中搜索。如果传递一个数组，使用第一个匹配成功的数组项。</li>
+<li>tzOffset<br>设置默认时区偏移量。此设置会使转换日期过滤器会自动的修正相应时区偏移量。<br>filters 自定义过滤器或者重写默认过滤器，参见自定义过滤器指南。</li>
+<li>tags<br>自定义标签或者重写默认标签，参见自定义标签指南。<br>extensions 添加第三方库，可以在编译模板时使用，参见参见自定义标签指南。</li>
 </ul>
 </li>
 <li><p>NodeJs</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tpl = swig.compileFile(<span class="string">"path/to/template/file.html"</span>);</span><br><span class="line"><span class="keyword">var</span> renderedHtml = tpl.render(&#123; vars: <span class="string">'to be inserted in template'</span> &#125;);</span><br></pre></td></tr></table></figure>
 <p> or </p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tpl = swig.compile(<span class="string">"Template string here"</span>);</span><br><span class="line"><span class="keyword">var</span> renderedHtml = tpl(&#123; vars: <span class="string">'to be inserted in template'</span> &#125;);</span><br></pre></td></tr></table></figure>
-<p>Express</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express</span><br><span class="line">$ npm install consolidate</span><br></pre></td></tr></table></figure>
-<p>Then </p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.engine(<span class="string">'.html'</span>, cons.swig);</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'html'</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tpl = swig.compile(<span class="string">"Template string here"</span>);</span><br><span class="line"><span class="keyword">var</span> renderedHtml = tpl(&#123; vars: <span class="string">'to be inserted in template'</span> &#125;);</span><br></pre></td></tr></table></figure>
+<p> Express</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express</span><br><span class="line">$ npm install consolidate</span><br></pre></td></tr></table></figure>
+<p> Then </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.engine(<span class="string">'.html'</span>, cons.swig);</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'html'</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <ol>
 <li><p>浏览器</p>
 <blockquote>
-<p>Swig浏览器版本的api基本与nodejs版相同，不同点如下：<br> 不能使用<code>swig.compileFile</code>，浏览器没有文件系统<br> 你必须提前使用<code>swig.compile</code>编译好模板<br> 按顺序使用<code>extends</code>, <code>import</code>, and <code>include</code>，同时在<code>swig.compile</code>里使用参数<code>templateKey</code>来查找模板</p>
+<p>Swig浏览器版本的api基本与nodejs版相同，不同点如下：<br>不能使用<code>swig.compileFile</code>，浏览器没有文件系统<br>你必须提前使用<code>swig.compile</code>编译好模板<br>按顺序使用<code>extends</code>, <code>import</code>, and <code>include</code>，同时在<code>swig.compile</code>里使用参数<code>templateKey</code>来查找模板</p>
 </blockquote>
- <figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">var template = swig.compile('<span class="tag">&lt;<span class="title">p</span>&gt;</span></span><span class="template_tag">&#123;% <span class="keyword">block</span> content %&#125;</span><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"><span class="tag">&lt;/<span class="title">p</span>&gt;</span>', &#123; filename: 'main' &#125;);</span><br><span class="line">            var mypage = swig.compile('</span><span class="template_tag">&#123;% <span class="keyword">extends</span> "main" %&#125;</span><span class="xml"></span><br><span class="line">                    </span><span class="template_tag">&#123;% <span class="keyword">block</span> content %&#125;</span><span class="xml"></span><br><span class="line">                        Oh hey there!</span><br><span class="line">                    </span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml">',</span><br><span class="line">             &#123; filename: 'mypage' &#125;);</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">var template = swig.compile('<span class="tag">&lt;<span class="title">p</span>&gt;</span></span><span class="template_tag">&#123;% <span class="keyword">block</span> content %&#125;</span><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"><span class="tag">&lt;/<span class="title">p</span>&gt;</span>', &#123; filename: 'main' &#125;);</span><br><span class="line">            var mypage = swig.compile('</span><span class="template_tag">&#123;% <span class="keyword">extends</span> "main" %&#125;</span><span class="xml"></span><br><span class="line">                    </span><span class="template_tag">&#123;% <span class="keyword">block</span> content %&#125;</span><span class="xml"></span><br><span class="line">                        Oh hey there!</span><br><span class="line">                    </span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml">',</span><br><span class="line">             &#123; filename: 'mypage' &#125;);</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>基础</p>
 <ul>
-<li><p>变量<br>   <code></code></p>
-<pre><code>`<span class="comment"></span>`
-</code></pre><blockquote>
+<li><p>变量<br><code></code><br><code></code></p>
+<blockquote>
 <p>如果变量未定义，输出空字符。变量可以通过过滤器来修改：<br>  <code>\{\{ name|title \}\}</code> was born on <code>{ { birthday|date(&#39;F jS, Y&#39;) } }</code></p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Jane was born on July 6th, 1985</span></span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<ul>
-<li>逻辑标签  参见<a href="#tag">标签</a>部分。</li>
+<li><p>逻辑标签  参见<a href="#tag">标签</a>部分。</p>
+</li>
 </ul>
 <h4 id="注释">注释</h4><h4 id="空白">空白</h4><blockquote>
 <p>模板里的空白在最终输出时默认保留，如果需要去掉空白，可以在逻辑标签前后加上空白控制服-：</p>
