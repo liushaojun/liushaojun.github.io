@@ -965,7 +965,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5dff60;
+  background: #acc90a;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -1698,7 +1698,7 @@ body {
   padding: 10px 0;
 }
 .theme-next #ds-thread #ds-reset .ds-sort {
-  display: none;
+  display: block;
 }
 .theme-next #ds-thread #ds-reset li.ds-tab a.ds-current {
   border: none;
@@ -1806,6 +1806,15 @@ body {
 }
 .theme-next #ds-thread #ds-reset .ds-service-list .ds-more-services:hover {
   background: none;
+}
+.theme-next #ds-recent-visitors .ds-avatar {
+  float: left;
+}
+.theme-next #ds-recent-visitors .ds-avatar img {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -ms-border-radius: 30px;
 }
 .theme-next .this_ua {
   background-color: #ccc !important;
