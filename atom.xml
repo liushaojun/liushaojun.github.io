@@ -4,7 +4,7 @@
   <subtitle><![CDATA[一个逼格的程序猿、码农。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://liushaojun.github.io/"/>
-  <updated>2015-12-05T06:30:11.000Z</updated>
+  <updated>2015-12-05T06:33:21.000Z</updated>
   <id>http://liushaojun.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://liushaojun.github.io/2015/12/04/Swig-%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/"/>
     <id>http://liushaojun.github.io/2015/12/04/Swig-模版教程/</id>
     <published>2015-12-04T03:29:52.000Z</published>
-    <updated>2015-12-05T06:30:11.000Z</updated>
+    <updated>2015-12-05T06:33:21.000Z</updated>
     <content type="html"><![CDATA[<h1 id="让我们开始使用_Swig_模版吧！">让我们开始使用 Swig 模版吧！</h1><hr>
 <h2 id="API">API</h2><ol>
 <li><p>初始化</p>
@@ -27,13 +27,11 @@
 </li>
 <li><p>options</p>
 <ul>
-<li>allowErrors:<br>默认值为 false。将所有模板解析和编译错误直接输出到模板。如果为 true，则将引发错误，抛出到 Node.js 进程中，可能会使您的应用程序崩溃。<ul>
+<li>allowErrors:<br>默认值为 false。将所有模板解析和编译错误直接输出到模板。如果为 true，则将引发错误，抛出到 Node.js 进程中，可能会使您的应用程序崩溃。</li>
 <li>autoescape:<br>默认true，强烈建议保持。字符转换表请参阅转义过滤器。<br>true: HTML安全转义<br>false: 不转义，除非使用转义过滤器或者转义标签<br>‘js’: js安全转义</li>
 <li>cache:<br>更改为 false 将重新编译每个请求的模板的文件。正式环境建议保持true。</li>
 <li>encoding<br>模板文件编码</li>
 <li>root<br>需要搜索模板的目录。如果模板传递给 swig.compileFile 绝对路径(以/开头)，Swig不会在模板root中搜索。如果传递一个数组，使用第一个匹配成功的数组项。<br>tzOffset<br>设置默认时区偏移量。此设置会使转换日期过滤器会自动的修正相应时区偏移量。<br>filters 自定义过滤器或者重写默认过滤器，参见自定义过滤器指南。<br>tags<br>自定义标签或者重写默认标签，参见自定义标签指南。<br>extensions 添加第三方库，可以在编译模板时使用，参见参见自定义标签指南。</li>
-</ul>
-</li>
 </ul>
 </li>
 <li><p>NodeJs</p>
@@ -62,8 +60,9 @@
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Jane was born on July 6th, 1985</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>逻辑标签  参见<a href="#tag">标签</a>部分。</p>
-</li>
+</ul>
+<ul>
+<li>逻辑标签  参见<a href="#tag">标签</a>部分。</li>
 </ul>
 <h4 id="注释">注释</h4><h4 id="空白">空白</h4><blockquote>
 <p>模板里的空白在最终输出时默认保留，如果需要去掉空白，可以在逻辑标签前后加上空白控制服-：</p>
