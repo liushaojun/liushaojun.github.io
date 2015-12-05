@@ -81,13 +81,13 @@ sidebar: hide
 #   GitHub: https://github.com/liushaojun
 #   Others:
 
-# Social Icons
-social_icons:
-  enable: true
-  # Icon Mappings
-  GitHub: github
-  Twitter: twitter
-  Weibo: weibo
+# # Social Icons
+# social_icons:
+#   enable: true
+#   # Icon Mappings
+#   GitHub: github
+#   Twitter: twitter
+#   Weibo: weibo
 
 
 # Sidebar Avatar
@@ -126,8 +126,8 @@ creative_commons: by-nc-sa
 #   enabled: [true/false] - Replace with specific image
 #   image: url-of-image   - Images's url
 custom_logo:
-  enabled: false
-  image:
+  enabled: true
+  image: /uploads/avatar.jpg
 
 
 # Code Highlight theme
@@ -190,8 +190,8 @@ duoshuo_share: true
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
   ua_enable: true
-  admin_enable: false
-  user_id: 0
+  admin_enable: true
+  user_id: 13076615
   #admin_nickname: ROOT
 
 

@@ -5,7 +5,7 @@
 # Site
 title: Kevin's Room
 subtitle: 一个逼格的程序猿、码农。
-description: "<{ 用心关注 细心聆听，努力做好每一天 }>"
+description: "用心关注 细心聆听 努力做好每一天"
 author: Shaojun Liu
 email: liu785029095@gmail.com
 language: zh-Hans # zn-CN
@@ -18,12 +18,22 @@ counter: true
 # ---------------------------------------------
 # 社交链接，将在侧栏中显示
 #----------------------------------------------
+# Social Icons
+social_icons:
+  enable: true
+  # Icon Mappings
+  GitHub: github
+  Twitter: twitter
+  Weibo: weibo
+  Email: envelope
+  ZhiHu: zhihu
 social:
   GitHub: http://github.com/liushaojun
   Twitter: your-twitter-url
   Weibo: http://www.weibo.com/u/2525006730/home
   # DouBan: your-douban-url
   ZhiHu: http://www.zhihu.com/people/liu-shao-jun-14
+  Email: mailTo:liushaojunvip@sina.com
 # 配置代码高亮
 highlight:
   enable: true
@@ -117,10 +127,10 @@ duoshuo_hotartical: true
 #disqus_shortname:
 
 # Share
-jiathis: true
+jiathis: false
 
 # Share
-# duoshuo_share: true
+duoshuo_share: true
 
 links_title: Links
 # links
@@ -128,6 +138,7 @@ links:
   MacTalk: http://macshuo.com/
   LongShao: http:/jinyunlong.github.io/
   TouTiao: http://toutiao.io/
+  StackOverflow: http://stackoverflow.com/
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
 #google_site_verification:
@@ -140,10 +151,10 @@ links:
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: false
-  user_id: 0
+# duoshuo_info:
+#   ua_enable: true
+#   admin_enable: false
+#   user_id: 0
   #admin_nickname: ROOT
 
 
