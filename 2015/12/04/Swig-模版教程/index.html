@@ -65,7 +65,7 @@ API
 API
 初始化
 1234567891011swig.init(&amp;#123;         allowErrors: false,            autoescape: true,         cache: true,         encoding: &apos;utf8&apos;,         filters: &amp;#123;&amp;#125;,         r">
-<meta property="og:updated_time" content="2015-12-05T06:26:51.000Z">
+<meta property="og:updated_time" content="2015-12-05T06:30:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swig 模版教程">
 <meta name="twitter:description" content="让我们开始使用 Swig 模版吧！
@@ -321,11 +321,11 @@ API
  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tpl = swig.compile(<span class="string">"Template string here"</span>);</span><br><span class="line"><span class="keyword">var</span> renderedHtml = tpl(&#123; vars: <span class="string">'to be inserted in template'</span> &#125;);</span><br></pre></td></tr></table></figure>
 <p>Express</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express</span><br><span class="line">$ npm install consolidate</span><br></pre></td></tr></table></figure>
+<p>Then </p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.engine(<span class="string">'.html'</span>, cons.swig);</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'html'</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>Then </p>
-<pre><code><span class="comment"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.engine(<span class="string">'.html'</span>, cons.swig);</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'html'</span>);</span><br></pre></td></tr></table></figure></span>
-</code></pre><ol>
+<ol>
 <li><p>浏览器</p>
 <blockquote>
 <p>Swig浏览器版本的api基本与nodejs版相同，不同点如下：<br> 不能使用<code>swig.compileFile</code>，浏览器没有文件系统<br> 你必须提前使用<code>swig.compile</code>编译好模板<br> 按顺序使用<code>extends</code>, <code>import</code>, and <code>include</code>，同时在<code>swig.compile</code>里使用参数<code>templateKey</code>来查找模板</p>

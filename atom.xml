@@ -4,7 +4,7 @@
   <subtitle><![CDATA[一个逼格的程序猿、码农。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://liushaojun.github.io/"/>
-  <updated>2015-12-05T06:26:51.000Z</updated>
+  <updated>2015-12-05T06:30:11.000Z</updated>
   <id>http://liushaojun.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://liushaojun.github.io/2015/12/04/Swig-%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/"/>
     <id>http://liushaojun.github.io/2015/12/04/Swig-模版教程/</id>
     <published>2015-12-04T03:29:52.000Z</published>
-    <updated>2015-12-05T06:26:51.000Z</updated>
+    <updated>2015-12-05T06:30:11.000Z</updated>
     <content type="html"><![CDATA[<h1 id="让我们开始使用_Swig_模版吧！">让我们开始使用 Swig 模版吧！</h1><hr>
 <h2 id="API">API</h2><ol>
 <li><p>初始化</p>
@@ -42,11 +42,11 @@
  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tpl = swig.compile(<span class="string">"Template string here"</span>);</span><br><span class="line"><span class="keyword">var</span> renderedHtml = tpl(&#123; vars: <span class="string">'to be inserted in template'</span> &#125;);</span><br></pre></td></tr></table></figure>
 <p>Express</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express</span><br><span class="line">$ npm install consolidate</span><br></pre></td></tr></table></figure>
+<p>Then </p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.engine(<span class="string">'.html'</span>, cons.swig);</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'html'</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>Then </p>
-<pre><code><span class="comment"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.engine(<span class="string">'.html'</span>, cons.swig);</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'html'</span>);</span><br></pre></td></tr></table></figure></span>
-</code></pre><ol>
+<ol>
 <li><p>浏览器</p>
 <blockquote>
 <p>Swig浏览器版本的api基本与nodejs版相同，不同点如下：<br> 不能使用<code>swig.compileFile</code>，浏览器没有文件系统<br> 你必须提前使用<code>swig.compile</code>编译好模板<br> 按顺序使用<code>extends</code>, <code>import</code>, and <code>include</code>，同时在<code>swig.compile</code>里使用参数<code>templateKey</code>来查找模板</p>
