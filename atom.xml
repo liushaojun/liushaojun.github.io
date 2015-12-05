@@ -4,7 +4,7 @@
   <subtitle><![CDATA[一个逼格的程序猿、码农。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://liushaojun.github.io/"/>
-  <updated>2015-12-05T06:45:57.000Z</updated>
+  <updated>2015-12-05T10:37:28.000Z</updated>
   <id>http://liushaojun.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://liushaojun.github.io/2015/12/04/Swig-%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/"/>
     <id>http://liushaojun.github.io/2015/12/04/Swig-模版教程/</id>
     <published>2015-12-04T03:29:52.000Z</published>
-    <updated>2015-12-05T06:45:57.000Z</updated>
+    <updated>2015-12-05T10:37:28.000Z</updated>
     <content type="html"><![CDATA[<h1 id="让我们开始使用_Swig_模版吧！">让我们开始使用 Swig 模版吧！</h1><hr>
 <h2 id="API">API</h2><ol>
 <li><p>初始化</p>

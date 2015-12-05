@@ -965,7 +965,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cfda36;
+  background: #5dff60;
 }
 .sidebar-nav {
   margin: 0 0 20px;
@@ -2268,4 +2268,129 @@ ul li {
   .footer-inner {
     text-align: center;
   }
+}
+left.styl,
+#fork-on-coding {
+  display: none;
+}
+#fork-on-coding a {
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  font-family: arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 2rem;
+  position: relative;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+#fork-on-coding a:hover {
+  background: #22c;
+  color: #fff;
+}
+#fork-on-coding a:before,
+#fork-on-coding a:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 1px;
+  background: #fff;
+}
+#fork-on-coding a:after {
+  bottom: 1px;
+  top: auto;
+}
+@media screen and (min-width: 800px) {
+  #fork-on-coding {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 200px;
+    overflow: hidden;
+    height: 200px;
+    z-index: 9999;
+  }
+  #fork-on-coding a {
+    width: 250px;
+    height: 35px;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+    -moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+    -ms-box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+    -o-box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+  }
+}
+.tooltip1 {
+  display: inline;
+  position: relative;
+  z-index: 999;
+}
+.tooltip1-content {
+  position: absolute;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  cursor: default;
+  pointer-events: none;
+}
+.tooltip1-content img {
+  position: absolute;
+  z-index: 9999;
+  width: 40px;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 50%;
+  margin-bottom: -35px;
+}
+.tooltip1:hover .tooltip1-content {
+  opacity: 1;
+}
+.tooltip1-effect .tooltip1-content {
+  -webkit-transform-origin: 150% 100%;
+  -moz-transform-origin: 150% 100%;
+  -ms-transform-origin: 150% 100%;
+  -o-transform-origin: 150% 100%;
+  transform-origin: 150% 100%;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  -ms-transition: opacity 0.3s, -ms-transform 0.3s;
+  -o-transition: opacity 0.3s, -o-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.tooltip1-effect .tooltip1-content {
+  -webkit-transform: scale3d(0, 0, 1);
+  -moz-transform: scale3d(0, 0, 1);
+  -ms-transform: scale3d(0, 0, 1);
+  -o-transform: scale3d(0, 0, 1);
+  transform: scale3d(0, 0, 1);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  -ms-transition: opacity 0.3s, -ms-transform 0.3s;
+  -o-transition: opacity 0.3s, -o-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.tooltip1:hover .tooltip1-content {
+  pointer-events: auto;
+  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -o-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
 }
