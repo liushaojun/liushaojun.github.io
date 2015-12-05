@@ -5,6 +5,11 @@
 > 接下来给大家分享一下我是怎么一步一步填满这些吭的
 
 1. Git push 
+	> git push 前一定要pull ，否则会报错。
+	**删除远程分支**
+	``` bash
+		$ git push origin :<branch-name> # 提交一个空的分支，覆盖它。
+	```
 2. Git pull
 > If you wish to set tracking information for this branch 				      you can do so with
 
