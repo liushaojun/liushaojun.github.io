@@ -11,6 +11,19 @@
   {% include '_scripts/analytics.swig' %}
 
   <div class="container one-column {% block page_class %}{% endblock %}">
+
+  <!-- Fork me on Github start -->
+  {% if theme.github_icon %}
+  <div class="tooltip1 tooltip1-effect" id="fork-on-coding">
+    <a href="https://github.com/liushaojun/liushaojun.github.io" title="Fork me on Github">
+    Fork me on Github
+    </a>
+    <span class="tooltip1-content">
+    <img src="/images/github.svg">
+    </span>
+  </div>
+  {% endif %}
+<!-- ent  -->
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">

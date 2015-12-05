@@ -147,7 +147,8 @@ auto_excerpt:
 # Use Lato font
 use_font_lato: true
 
-
+# show github icon
+github_icon: true
 
 # ---------------------------------------------------------------
 # Third Party Services Settings
