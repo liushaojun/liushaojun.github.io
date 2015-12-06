@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://liushaojun.github.io/about/index.html</loc>
+    <lastmod>2015-12-06T13:34:32.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://liushaojun.github.io/2015/12/04/Swig-%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2015-12-05T10:37:28.000Z</lastmod>
   </url>
@@ -19,11 +24,6 @@
   <url>
     <loc>http://liushaojun.github.io/categories/index.html</loc>
     <lastmod>2015-12-03T14:21:22.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://liushaojun.github.io/about/index.html</loc>
-    <lastmod>2015-12-03T14:12:00.000Z</lastmod>
   </url>
   
   <url>
