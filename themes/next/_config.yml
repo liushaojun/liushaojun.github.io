@@ -47,8 +47,8 @@ menu_icons:
   tags: tags
   archives: archive
   commonweal: heartbeat
-
-
+# 配置high 一下
+# high: true
 
 
 # ---------------------------------------------------------------

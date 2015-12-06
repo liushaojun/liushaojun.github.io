@@ -7,8 +7,9 @@
     </blockquote>
     <ul class="ds-recent-visitors" data-num-items="36" data-avatar-size="30" id="ds-recent-visitors">
     </ul>  
-      <div class="ds-thread" data-thread-key="{{ page.path }}"
-           data-title="{{ page.title }}" data-url="{{ page.permalink }}">
+      <div class="ds-thread ds-thread-count" data-thread-key="{{ page.path }}"
+           data-title="{{ page.title }}" data-url="{{ page.permalink }}" >
+
       </div>
      
     {% elseif theme.disqus_shortname %}
