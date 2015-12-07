@@ -17,7 +17,9 @@
   <meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}" />
 {% endif %}
 
-
+{% if theme.wimii %}
+<meta name="wumiiVerification" content="a2831fdd-6c6f-487b-8c47-18a7a84d1c4c" />
+{% endif %}
 {% if theme.qihu_site_verification %}
   <meta name="360-site-verification" content="{{ theme.qihu_site_verification }}" />
 {% endif %}

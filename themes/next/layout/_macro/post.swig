@@ -195,12 +195,15 @@
       {% if is_index and not isLast %}
         <div class="post-eof"></div>
       {% endif %}
+
+    </footer>
+  </article>
       <!-- wumii  start -->
-      {% if theme.favorite_post %}
+      {% if theme.wimii %}
       <div style="margin:0px auto; padding-left:23px; text-align:center;">
         <script type="text/javascript" id="wumiiRelatedItems"></script>
         <script type="text/javascript">
-        var wumiiPermaLink = "{{ url_for(post.path) }}"; //请用代码生成文章永久的链接
+        var wumiiPermaLink = "{{ page.permalink}}"; //请用代码生成文章永久的链接
         var global_tags = [];
         {% if post.tags and post.tags.length and not is_index %}
           {% for tag in post.tags %}
