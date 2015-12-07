@@ -189,8 +189,8 @@
     <link href="http://liushaojun.github.io/2015/12/03/beautiful-word-cloud/"/>
     <id>http://liushaojun.github.io/2015/12/03/beautiful-word-cloud/</id>
     <published>2015-12-03T14:10:40.000Z</published>
-    <updated>2015-12-03T15:04:07.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="简单美观的文字标签云组件">简单美观的文字标签云组件</h1><p>  </p>
+    <updated>2015-12-07T14:08:14.000Z</updated>
+    <content type="html"><![CDATA[<p>  </p>
   <div class="entry">
 
 <p>经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用office一样制作信息图（infographic），而不是用专业的制图工具。这一步跨过去，看到的将是欣欣向荣的真正大数据时代。</p>
@@ -212,10 +212,10 @@
 <p><img src="http://bruce.u.qiniudn.com/2014/02/10/wordcloud-en.jpg" alt="英文"></p>
 </div>]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="简单美观的文字标签云组件">简单美观的文字标签云组件</h1><p>  </p>
+    <![CDATA[<p>  </p>
   <div class="entry">
 
-<p>经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用]]>
+<p>经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用office一样制作信息图（infographic），而不是用专业的制图工具。]]>
     </summary>
     
       <category term="WordCloud" scheme="http://liushaojun.github.io/tags/WordCloud/"/>
