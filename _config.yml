@@ -187,5 +187,5 @@ deploy:
   type: git
   repository: 
     github: https://github.com/liushaojun/liushaojun.github.io.git,master
-    gitcafe: git@gitcafe.com:liushaojun/liushaojun.git,gitcafe-pages
+    # gitcafe: git@gitcafe.com:liushaojun/liushaojun.git,gitcafe-pages
 

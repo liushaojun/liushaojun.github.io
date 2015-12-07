@@ -166,7 +166,8 @@ mathjax: true
 
 # Duoshuo ShortName
 duoshuo_shortname: liushaojun
-
+# wimii
+favorite_post: true
 # Disqus
 #disqus_shortname:
 
