@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Kevin's Room]]></title>
+  <title><![CDATA[Brook's Room]]></title>
   <subtitle><![CDATA[一个逼格的程序猿、码农。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://ishaojun.me/"/>
@@ -9,7 +9,7 @@
   
   <author>
     <name><![CDATA[Shaojun Liu]]></name>
-    <email><![CDATA[liu785029095@gmail.com]]></email>
+    <email><![CDATA[me@ishaojun.com]]></email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
