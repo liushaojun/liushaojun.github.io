@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Kevin's Room
+title: Brook's Room
 subtitle: 一个逼格的程序猿、码农。
 description: "用心关注 细心聆听 努力做好每一天"
 author: Shaojun Liu
-email: liu785029095@gmail.com
+email: me@ishaojun.com
 language: zh-Hans # zn-CN
 timezone:
 favicon: /favicon.ico
@@ -30,7 +30,7 @@ social_icons:
 social:
   GitHub: http://github.com/liushaojun
   Twitter: your-twitter-url
-  Weibo: http://www.weibo.com/u/2525006730/home
+  Weibo: http://www.weibo.com/imshaojun
   # DouBan: your-douban-url
   ZhiHu: http://www.zhihu.com/people/liu-shao-jun-14
   Email: mailTo:liushaojunvip@sina.com
@@ -43,7 +43,7 @@ highlight:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://liushaojun.github.io
+url: http://ishaojun.me
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -114,13 +114,13 @@ mathjax:
 
 
 # Swiftype Search API Key
-swiftype_key: 3dArsRm2N87ztbgueLCQ
+swiftype_key: sD1Pp2Me6pZSs7zJfzca  #
 
 # Baidu Analytics ID
-baidu_analytics: 9608b1a7bcbbcaeb58d4ec9843ee2a77
+baidu_analytics: daf9a80804a314098db0bab59dbdb09d
 
 # Duoshuo ShortName
-duoshuo_shortname: liushaojun
+duoshuo_shortname: ishaojun
 # 多说热评文章
 duoshuo_hotartical: true
 # Disqus
@@ -142,8 +142,9 @@ links:
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
 #google_site_verification:
+# google-site-verification=rrScp3LLhpzTZ4mnby9KqCd8h2p67w4Cr7YfvP6iPYU   谷歌dns 验证
 
-
+bing_site_verification: 49DFB724F74211398C07F489614D9FB8
 # Google Analytics
 #google_analytics:
 

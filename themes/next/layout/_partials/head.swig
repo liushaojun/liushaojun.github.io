@@ -12,13 +12,15 @@
   <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
 {% endif %}
 
-
+{% if theme.bing_site_verification %}
+<meta name="msvalidate.01" content="{{ theme.bing_site_verification }}" />
+{% endif %}
 {% if theme.baidu_site_verification %}
   <meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}" />
 {% endif %}
 
-{% if theme.wimii %}
-<meta name="wumiiVerification" content="a2831fdd-6c6f-487b-8c47-18a7a84d1c4c" />
+{% if theme.wumii.enable %}
+<meta name="wumiiVerification" content="461092b2-2da7-4c6f-89da-a8c525de8245" />
 {% endif %}
 {% if theme.qihu_site_verification %}
   <meta name="360-site-verification" content="{{ theme.qihu_site_verification }}" />

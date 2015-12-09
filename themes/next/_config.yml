@@ -166,8 +166,10 @@ mathjax: true
 
 # Duoshuo ShortName
 duoshuo_shortname: liushaojun
-# wimii
-wimii: true
+# wumii
+wumii: 
+  enable: true
+  url: http://ishaojun.me
 # Disqus
 #disqus_shortname:
 

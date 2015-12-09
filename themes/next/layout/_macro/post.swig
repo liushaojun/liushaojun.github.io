@@ -199,7 +199,7 @@
     </footer>
   </article>
       <!-- wumii  start -->
-      {% if theme.wimii %}
+      {% if theme.wumii.enable %}
       <div style="margin:0px auto; padding-left:23px; text-align:center;">
         <script type="text/javascript" id="wumiiRelatedItems"></script>
         <script type="text/javascript">
@@ -221,7 +221,7 @@
         // wumiiTags =; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
         var wumiiCategories = categories;
         //var wumiiCategories = [{{ page.categories}}]; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
-        var wumiiSitePrefix = "http://liushaojun.github.io/";
+        var wumiiSitePrefix = "{{theme.wumii.url}}";
         var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
       </script>
       <script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
