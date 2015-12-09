@@ -3,9 +3,9 @@
   <title><![CDATA[Kevin's Room]]></title>
   <subtitle><![CDATA[一个逼格的程序猿、码农。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://liushaojun.github.io/"/>
+  <link href="http://ishaojun.me/"/>
   <updated>2015-12-05T10:37:28.000Z</updated>
-  <id>http://liushaojun.github.io/</id>
+  <id>http://ishaojun.me/</id>
   
   <author>
     <name><![CDATA[Shaojun Liu]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Swig 模版教程]]></title>
-    <link href="http://liushaojun.github.io/2015/12/04/Swig-%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/"/>
-    <id>http://liushaojun.github.io/2015/12/04/Swig-模版教程/</id>
+    <link href="http://ishaojun.me/2015/12/04/Swig-%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/"/>
+    <id>http://ishaojun.me/2015/12/04/Swig-模版教程/</id>
     <published>2015-12-04T03:29:52.000Z</published>
     <updated>2015-12-05T10:37:28.000Z</updated>
     <content type="html"><![CDATA[<h1 id="让我们开始使用_Swig_模版吧！">让我们开始使用 Swig 模版吧！</h1><hr>
@@ -174,20 +174,20 @@
 <figure class="highlight javascript"><table><]]>
     </summary>
     
-      <category term="javascript" scheme="http://liushaojun.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="http://ishaojun.me/tags/javascript/"/>
     
-      <category term="nodeJs" scheme="http://liushaojun.github.io/tags/nodeJs/"/>
+      <category term="nodeJs" scheme="http://ishaojun.me/tags/nodeJs/"/>
     
-      <category term="swig" scheme="http://liushaojun.github.io/tags/swig/"/>
+      <category term="swig" scheme="http://ishaojun.me/tags/swig/"/>
     
-      <category term="前端" scheme="http://liushaojun.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://ishaojun.me/categories/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[简单美观的文字标签云组件]]></title>
-    <link href="http://liushaojun.github.io/2015/12/03/beautiful-word-cloud/"/>
-    <id>http://liushaojun.github.io/2015/12/03/beautiful-word-cloud/</id>
+    <link href="http://ishaojun.me/2015/12/03/beautiful-word-cloud/"/>
+    <id>http://ishaojun.me/2015/12/03/beautiful-word-cloud/</id>
     <published>2015-12-03T14:10:40.000Z</published>
     <updated>2015-12-07T14:08:14.000Z</updated>
     <content type="html"><![CDATA[<p>  </p>
@@ -218,18 +218,18 @@
 <p>经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用office一样制作信息图（infographic），而不是用专业的制图工具。]]>
     </summary>
     
-      <category term="WordCloud" scheme="http://liushaojun.github.io/tags/WordCloud/"/>
+      <category term="WordCloud" scheme="http://ishaojun.me/tags/WordCloud/"/>
     
-      <category term="javascript" scheme="http://liushaojun.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="http://ishaojun.me/tags/javascript/"/>
     
-      <category term="前端" scheme="http://liushaojun.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://ishaojun.me/categories/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://liushaojun.github.io/2015/12/02/hello-world/"/>
-    <id>http://liushaojun.github.io/2015/12/02/hello-world/</id>
+    <link href="http://ishaojun.me/2015/12/02/hello-world/"/>
+    <id>http://ishaojun.me/2015/12/02/hello-world/</id>
     <published>2015-12-02T12:26:27.000Z</published>
     <updated>2015-12-02T12:26:27.000Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
