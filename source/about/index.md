@@ -4,14 +4,11 @@ date: {{ date }}
 # Me
 Name： 　__Brook  \| 刘少君 __
 Home：　  BeiJing- China
-二次元：　若风 
 Tags：　   音乐 \| 北漂 \| 攻城狮
 <blockquote class="blockquote-center">Too young,too naive.</blockquote>
 
 ------
 # Links:
-## Read
-- [豆瓣](http://book.douban.com/people/138695862/) 
 
 ## Code
 - [Github](https://github.com/liushaojun)
@@ -23,7 +20,7 @@ Tags：　   音乐 \| 北漂 \| 攻城狮
 - Gmail：　  　[liu785029095@gmail.com](mailTo:liu785029095@gmail.com)
 - 知乎：　　　[@若风](http://www.zhihu.com/people/liu-shao-jun-14)
 - WeChat：　   <a href="javascript:;" target="_top" onclick="$('#qr_code').toggle('slow');$('#qr_code_tip').toggle();"> @Brook</a> <span id="qr_code_tip"  style="display:none;color:red;margin-left:10px"><strong>Scan QR Code</strong> <i class="fa fa-arrow-down"></i></span>
-- gitcafe：　　[@liushaojun](https://gitcafe.com/liushaojun)
+
 ---
 ## Show
 <div id='qr_code' style="display:none">

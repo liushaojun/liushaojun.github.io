@@ -165,11 +165,12 @@ mathjax: true
 #baidu_analytics:
 
 # Duoshuo ShortName
-duoshuo_shortname: liushaojun
+# duoshuo_shortname: liushaojun
 # wumii
 wumii: 
   enable: true
-  url: http://ishaojun.me
+  url: http://imjun.me
+  wumii_site_verification: 8220b5bd-abb4-41db-82fd-220bbeb32973
 # Disqus
 #disqus_shortname:
 
@@ -177,7 +178,7 @@ wumii:
 #jiathis:
 
 # Share
-duoshuo_share: true
+# duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
