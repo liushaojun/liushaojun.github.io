@@ -6,6 +6,7 @@
 title: Brook's Room
 subtitle: 一个逼格的程序猿、码农。
 description: "用心关注 细心聆听 努力做好每一天"
+keywords: "IT,java,node,前端,HTML5,javascript,音乐"
 author: Shaojun Liu
 email: me@imjun.me
 language: zh-Hans # zn-CN
@@ -136,7 +137,7 @@ links_title: Links
 # links
 links:
   MacTalk: http://macshuo.com/
-  LongShao: http:/jinyunlong.github.io/
+  LongShao: http://jinyunlong.github.io/
   TouTiao: http://toutiao.io/
   StackOverflow: http://stackoverflow.com/
 # Google Webmaster tools verification setting

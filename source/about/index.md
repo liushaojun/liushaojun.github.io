@@ -8,7 +8,7 @@ Tags：　   音乐 \| 北漂 \| 攻城狮
 <blockquote class="blockquote-center">Too young,too naive.</blockquote>
 
 ------
-# Links:
+# Links
 
 ## Code
 - [Github](https://github.com/liushaojun)
@@ -28,9 +28,9 @@ Tags：　   音乐 \| 北漂 \| 攻城狮
 </div>
 ------
 ## 听听音乐，轻松一下
-<embed src="http://music.163.com/style/swf/widget.swf?sid=36587407&type=2&auto=0&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed>
+<embed src="http://music.163.com/style/swf/widget.swf?sid=29803675&type=2&auto=0&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed>
 ------
 博客基于Next主题修改，感谢Next主题的作者。
-博客源码已共享在我的[Github](https://github.com/liushaojun/liushaojun.github.io/hexo-source)中,欢迎 **FOLLOW**。
+博客源码已共享在我的[Github](https://github.com/liushaojun/liushaojun.github.io)中,欢迎 **FOLLOW**。
 
 
