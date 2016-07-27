@@ -1,26 +1,312 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Brook's Room]]></title>
-  <subtitle><![CDATA[一个逼格的程序猿、码农。]]></subtitle>
-  <link href="/atom.xml" rel="self"/>
-  <link href="http://imjun.me/"/>
-  <updated>2016-07-27T02:13:33.000Z</updated>
-  <id>http://imjun.me/</id>
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+<meta name="msvalidate.01" content="49DFB724F74211398C07F489614D9FB8" />
+
+
+  <meta name="baidu-site-verification" content="Uw8cHh5ht2" />
+
+
+
+  <meta name="wumiiVerification" content="8220b5bd-abb4-41db-82fd-220bbeb32973" />
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/vendors/fontdiao/css/fontdiao.css?v=0.0.8" rel="stylesheet" type="text/css" />
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Brook's Room" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="Zookeeper 教程
+
+zookeeper 是一个开源的分布式协调服务，由知名互联网公司雅虎公司创建，是Google Chubby 开源实现。 他致力于提供一个高性能，高可用，且具有严格的顺序访问控制能力的分布式协调服务。分布式应用可以基于诸如数据发布/订阅、负载均衡、命名服务、分布式协调/通知，集群管理、Master选举、分布式锁和分布式队列。
+
+基本概念zookeeper 应用场景数据的发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zookeeper教程">
+<meta property="og:url" content="http://imjun.me/2016/07/27/zookeeper教程/index.html">
+<meta property="og:site_name" content="Brook's Room">
+<meta property="og:description" content="Zookeeper 教程
+
+zookeeper 是一个开源的分布式协调服务，由知名互联网公司雅虎公司创建，是Google Chubby 开源实现。 他致力于提供一个高性能，高可用，且具有严格的顺序访问控制能力的分布式协调服务。分布式应用可以基于诸如数据发布/订阅、负载均衡、命名服务、分布式协调/通知，集群管理、Master选举、分布式锁和分布式队列。
+
+基本概念zookeeper 应用场景数据的发">
+<meta property="og:updated_time" content="2016-07-27T02:13:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="zookeeper教程">
+<meta name="twitter:description" content="Zookeeper 教程
+
+zookeeper 是一个开源的分布式协调服务，由知名互联网公司雅虎公司创建，是Google Chubby 开源实现。 他致力于提供一个高性能，高可用，且具有严格的顺序访问控制能力的分布式协调服务。分布式应用可以基于诸如数据发布/订阅、负载均衡、命名服务、分布式协调/通知，集群管理、Master选举、分布式锁和分布式队列。
+
+基本概念zookeeper 应用场景数据的发">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'hide',
+    motion: true
+  };
+</script>
+
+  <title> zookeeper教程 | Brook's Room </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
   
-  <author>
-    <name><![CDATA[Shaojun Liu]]></name>
-    <email><![CDATA[me@imjun.me]]></email>
-  </author>
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?daf9a80804a314098db0bab59dbdb09d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+
+  <!-- Fork me on Github start -->
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <div class="tooltip1 tooltip1-effect" id="fork-on-coding">
+    <a href="https://github.com/liushaojun/liushaojun.github.io" title="Fork me on Github">
+    Fork me on Github
+    </a>
+    <span class="tooltip1-content">
+    <img src="/images/github.svg">
+    </span>
+  </div>
   
-  <entry>
-    <title><![CDATA[zookeeper教程]]></title>
-    <link href="http://imjun.me/2016/07/27/zookeeper%E6%95%99%E7%A8%8B/"/>
-    <id>http://imjun.me/2016/07/27/zookeeper教程/</id>
-    <published>2016-07-27T02:07:53.000Z</published>
-    <updated>2016-07-27T02:13:33.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="Zookeeper_教程">Zookeeper 教程</h1><hr>
+<!-- ent  -->
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner">
+
+<div class="site-meta custom-logo">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Brook's Room</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一个逼格的程序猿、码农。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'Jy6V-D4qVFSMdS6g9hYc','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                zookeeper教程
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-07-27T10:07:53+08:00" content="2016-07-27">
+              2016-07-27
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/27/zookeeper教程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/27/zookeeper教程/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><h1 id="Zookeeper_教程">Zookeeper 教程</h1><hr>
 <blockquote>
 <p>zookeeper 是一个开源的分布式协调服务，由知名互联网公司雅虎公司创建，是Google Chubby 开源实现。 他致力于提供一个高性能，高可用，且具有严格的顺序访问控制能力的分布式协调服务。分布式应用可以基于诸如数据发布/订阅、负载均衡、命名服务、分布式协调/通知，集群管理、Master选举、分布式锁和分布式队列。</p>
 </blockquote>
@@ -73,369 +359,567 @@
 <p>￼<br><strong>核心算法流程图</strong></p>
 <p>￼<br><strong>全局事务锁的相关代码</strong></p>
 <p>￼</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="Zookeeper_教程">Zookeeper 教程</h1><hr>
-<blockquote>
-<p>zookeeper 是一个开源的分布式协调服务，由知名互联网公司雅虎公司创建，是Google Chubby 开源实现。 他致力于提供一个高性能，高可用，且具有严]]>
-    </summary>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/09/在线工具列表/" rel="next" title="在线工具列表">
+                <i class="fa fa-chevron-left"></i> 在线工具列表
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+
+    </footer>
+  </article>
+      <!-- wumii  start -->
+      
+      <div style="margin:0px auto; padding-left:23px; text-align:center;">
+        <script type="text/javascript" id="wumiiRelatedItems"></script>
+        <script type="text/javascript">
+        var wumiiPermaLink = "http://imjun.me/2016/07/27/zookeeper教程/"; //请用代码生成文章永久的链接
+        var global_tags = [];
+        
+        var categories = [];
+         
+        wumiiTags = global_tags.join(',');
+        var wumiiTitle = "zookeeper教程"; //请用代码生成文章标题
+        // wumiiTags =; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+        var wumiiCategories = categories;
+        //var wumiiCategories = [[object Object]]; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
+        var wumiiSitePrefix = "http://imjun.me";
+        var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
+      </script>
+      <script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
+      <!-- <a href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+          <img src="http://static.wumii.cn/images/pixel.png" alt="无觅关联推荐，快速提升流量" style="border:0;padding:0;margin:0;" />
+      </a> -->
+      </div>
+      
+      <!-- wumii end -->
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/07/27/zookeeper教程/"
+     data-title="zookeeper教程"
+     data-content=""
+     data-url="http://imjun.me/2016/07/27/zookeeper教程/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+        
+  <div class="comments" id="comments">
+
     
-  </entry>
+    <blockquote>
+    <p>最近访客</p>
+    </blockquote>
+    <ul class="ds-recent-visitors" data-num-items="36" data-avatar-size="30" id="ds-recent-visitors">
+    </ul>  
+      <div class="ds-thread ds-thread-count" data-thread-key="2016/07/27/zookeeper教程/"
+           data-title="zookeeper教程" data-url="http://imjun.me/2016/07/27/zookeeper教程/" >
+
+      </div>
+     
+    
+  </div>
+
+
+      </div>
+
+      
+        
   
-  <entry>
-    <title><![CDATA[在线工具列表]]></title>
-    <link href="http://imjun.me/2016/05/09/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E5%88%97%E8%A1%A8/"/>
-    <id>http://imjun.me/2016/05/09/在线工具列表/</id>
-    <published>2016-05-09T07:16:51.000Z</published>
-    <updated>2016-07-26T15:34:29.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="Java源代码搜索">Java源代码搜索</h2><blockquote>
-<p><a href="http://grepcode.com/" target="_blank" rel="external">Grepcode</a>是一个面向于Java开发人员的网站，在这里你可以通过Java的projects、classes等各种关键字在线查看它对应的源码，知道对应的project、classes等信息。 更方便的是，能提供非常多不同版本的源码在线查看、jar包、源码jar包、doc的下载。 同样，你也可以之间使用xxx-1.1.1.jar类似这样的名字直接找到对应的jar包，从而下载。</p>
-</blockquote>
-<p><img src="http://www.hollischuang.com/wp-content/uploads/2016/04/grepcode1-1024x279.png" alt=""></p>
-<h2 id="开源代码及文档搜索">开源代码及文档搜索</h2><blockquote>
-<p><a href="https://searchcode.com/" target="_blank" rel="external">Searchcode</a>是一个源码搜索引擎，目前支持从 Github、Bitbucket、Google Code、CodePlex、SourceForge 和 Fedora Project 平台搜索公开的源码。</p>
-</blockquote>
-<p><img src="http://www.hollischuang.com/wp-content/uploads/2016/04/grepcode1-1024x279.png" alt="searchcode"></p>
-<h2 id="在线UML制图">在线UML制图</h2><blockquote>
-<p><a href="https://www.processon.com/" target="_blank" rel="external">Processon</a>是一个在线协作绘图平台,为用户提供最强大、易用的作图工具!支持在线创作流程图、BPMN、UML图、UI界面原型设计、iOS界面原型设计等。</p>
-</blockquote>
-<p><img src="http://www.hollischuang.com/wp-content/uploads/2016/04/processon.png" alt=""></p>
-<h2 id="Json在线验证及格式化">Json在线验证及格式化</h2><blockquote>
-<p>我用过很多json在线格式化的工具，经过实践，<a href="http://json.cn/" target="_blank" rel="external">json.cn</a>是比较不错的，不仅支持json格式的验证及格式化，还可以将json格式压缩成普通文本等好用功能。</p>
-</blockquote>
-<h2 id="Diff_Check">Diff Check</h2><blockquote>
-<p>使用过svn或者git的人对diffcheck肯定不陌生，但有时候我们修改的文本内容并没有被版本控制，那么就可以使用在线的网站查看文件的修改情况。<a href="https://www.diffchecker.com/" target="_blank" rel="external">diffchecker</a>很不错。</p>
-</blockquote>
-<p><img src="http://www.hollischuang.com/wp-content/uploads/2016/04/differ-1024x612.png" alt=""></p>
-<h2 id="MarkDown编辑器">MarkDown编辑器</h2><ul>
-<li><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd</a></li>
-<li><a href="https://segmentfault.com/write?freshman=1" target="_blank" rel="external">segmentfault</a></li>
-<li><a href="http://25.io/mou/" target="_blank" rel="external">Mou</a> Mac平台下我的最爱</li>
-</ul>
-<h2 id="构建工具">构建工具</h2><h3 id="Maven依赖查询">Maven依赖查询</h3><blockquote>
-<p><a href="http://mvnrepository.com/" target="_blank" rel="external">mvnrepository</a>这个不用详细解释了，就是查询maven的gav信息一类的。因为我们公司有内部的Nexus仓库，所以很少用这个。</p>
-</blockquote>
-<p><img src="http://www.hollischuang.com/wp-content/uploads/2016/04/log4j1.png" alt=""></p>
-<h3 id="Apache_Maven">Apache Maven</h3><blockquote>
-<p><a href="http://maven.apache.org/" target="_blank" rel="external">Apache Maven</a>使用声明进行构建并进行依赖管理，偏向于使用约定而不是配置进行构建。Maven优于Apache Ant。后者采用了一种过程化的方式进行配置，所以维护起来相当困难。</p>
-</blockquote>
-<h3 id="Gradle">Gradle</h3><blockquote>
-<p><a href="http://www.gradle.org/" target="_blank" rel="external">Gradle</a>Gradle采用增量构建。Gradle通过Groovy编程而不是传统的XML声明进行配置。Gradle可以很好地配合Maven进行依赖管理，并且把Ant脚本当作头等公民。</p>
-</blockquote>
-<h2 id="在线代码运行">在线代码运行</h2><blockquote>
-<p><a href="http://tool.lu/coderunner/" target="_blank" rel="external">coderunner</a>可以在线运行php,c,c++,go,python,java,groovy等代码。基本是很少使用。</p>
-</blockquote>
-<p><img src="http://www.hollischuang.com/wp-content/uploads/2016/04/coderunner-1024x178.png" alt=""></p>
-<h2 id="在线翻译">在线翻译</h2><p><a href="https://translate.google.cn/" target="_blank" rel="external">谷歌翻译</a><br><a href="http://fanyi.baidu.com/" target="_blank" rel="external">百度翻译</a><br><a href="http://fanyi.youdao.com/" target="_blank" rel="external">有道翻译</a></p>
-<h2 id="SQL自动生成Java代码">SQL自动生成Java代码</h2><blockquote>
-<p><a href="http://www.autojcode.com/code/sql2class.jsp" target="_blank" rel="external">AutoJCode</a>可以从sql的建表语句中生成一个DO类。</p>
-</blockquote>
-<h2 id="json生成java类">json生成java类</h2><p><a href="http://www.bejson.com/json2javapojo/" target="_blank" rel="external">json2java</a></p>
-<h2 id="SQL美化/格式化/压缩">SQL美化/格式化/压缩</h2><p><a href="http://tool.lu/sql/" target="_blank" rel="external">sql在线美化，格式化，压缩</a></p>
-<h2 id="编码转换">编码转换</h2><p><a href="http://tool.chinaz.com/tools/unicode.aspx" target="_blank" rel="external">编码转换</a>站长工具的编码转换比较全面，提供了Unicode编码、UFT8编码、URL编码/解码等功能。</p>
-<h2 id="Corn表达式生成">Corn表达式生成</h2><blockquote>
-<p><a href="https://zh.wikipedia.org/zh-sg/Cron" target="_blank" rel="external">Cron</a>一般用于配置定时任务的执行。没有什么特别好的网站，<a href="http://www.pdtools.net/tools/becron.jsp" target="_blank" rel="external">pdtools</a>  还可以吧，基本可以满足需求。</p>
-</blockquote>
-<p><img src="http://www.hollischuang.com/wp-content/uploads/2016/04/corn.png" alt=""></p>
-<h2 id="正则验证">正则验证</h2><blockquote>
-<p><a href="http://tool.chinaz.com/tools/regexgenerate" target="_blank" rel="external">站长工具</a>提供的正则代码生成。</p>
-</blockquote>
-<h2 id="时间戳转换">时间戳转换</h2><blockquote>
-<p><a href="https://zh.wikipedia.org/wiki/%E6%99%82%E9%96%93%E6%88%B3" target="_blank" rel="external">时间戳</a> (英语：Timestamp）是指在一连串的资料中加入辨识文字，如时间或日期，用以保障本地端（local）资料更新顺序与远端（remote）一致。</p>
-</blockquote>
-<p><a href="http://tool.chinaz.com/Tools/unixtime.aspx" target="_blank" rel="external">站长工具</a>提供的时间戳转换。</p>
-<h2 id="世界时间转换">世界时间转换</h2><p>世界各地时间转换，我比较常用的是北京时间转纽约时间，北京时间转洛杉矶时间。 timebie提供了世界时间相互转换的功能。</p>
-<h2 id="加密解密">加密解密</h2><blockquote>
-<p>站长工具中的<a href="http://tool.chinaz.com/tools/textencrypt.aspx" target="_blank" rel="external">加密解密</a></p>
-</blockquote>
-<h2 id="单位换算">单位换算</h2><blockquote>
-<p><a href="http://www.convertworld.com/zh-hans/" target="_blank" rel="external">convertworld</a>是一个比较全的单位换算的网站。我经常用它进行时间单位和货币单位的换算。</p>
-</blockquote>
-<p><img src="http://www.hollischuang.com/wp-content/uploads/2016/04/convertworld.png" alt="convertworld"></p>
-<h2 id="在线调色板">在线调色板</h2><blockquote>
-<p><a href="http://tool.chinaz.com/Tools/OnlineColor.aspx" target="_blank" rel="external">在线调色板</a></p>
-</blockquote>
-<h2 id="常用对照表">常用对照表</h2><ul>
-<li><a href="http://tool.oschina.net/commons?type=4" target="_blank" rel="external">ASCII对照表</a></li>
-<li><a href="http://tool.oschina.net/commons?type=5" target="_blank" rel="external">HTTP状态码</a></li>
-<li><a href="http://tool.oschina.net/commons" target="_blank" rel="external">HTTP Content-type</a></li>
-<li><a href="http://tool.oschina.net/commons?type=7" target="_blank" rel="external">TCP/UDP常见端口参考</a></li>
-<li><a href="http://tool.oschina.net/commons?type=2" target="_blank" rel="external">HTML转义字符</a></li>
-<li><a href="http://tool.oschina.net/commons?type=3" target="_blank" rel="external">RGB颜色参考</a></li>
-</ul>
-<h2 id="欢迎补充~">欢迎补充~</h2>]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="Java源代码搜索">Java源代码搜索</h2><blockquote>
-<p><a href="http://grepcode.com/" target="_blank" rel="external">Grepcode</a>是一个面向于Java开发人员的网站]]>
-    </summary>
-    
-      <category term="java" scheme="http://imjun.me/tags/java/"/>
-    
-      <category term="工具" scheme="http://imjun.me/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/uploads/avatar.jpg" alt="Shaojun Liu" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Shaojun Liu</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">用心关注 细心聆听 努力做好每一天</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://github.com/liushaojun" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="your-twitter-url" target="_blank">
+                  
+                    <i class="fa fa-twitter"></i> Twitter
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.weibo.com/imshaojun" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/liu-shao-jun-14" target="_blank">
+                  
+                    <i class="fa fa-zhihu"></i> ZhiHu
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailTo:liushaojunvip@sina.com" target="_blank">
+                  
+                    <i class="fa fa-envelope"></i> Email
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://macshuo.com/" target="_blank">MacTalk</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://jinyunlong.github.io/" target="_blank">LongShao</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://toutiao.io/" target="_blank">TouTiao</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://stackoverflow.com/" target="_blank">StackOverflow</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Zookeeper_教程"><span class="nav-number">1.</span> <span class="nav-text">Zookeeper 教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zookeeper_应用场景"><span class="nav-number">1.2.</span> <span class="nav-text">zookeeper 应用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据的发布、订阅"><span class="nav-number">1.2.1.</span> <span class="nav-text">数据的发布、订阅</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡"><span class="nav-number">1.2.2.</span> <span class="nav-text">负载均衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DB"><span class="nav-number">1.2.3.</span> <span class="nav-text">DB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命名服务"><span class="nav-number">1.2.4.</span> <span class="nav-text">命名服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分布式协调/通知"><span class="nav-number">1.2.5.</span> <span class="nav-text">分布式协调/通知</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境搭建"><span class="nav-number">1.3.</span> <span class="nav-text">环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布/订阅"><span class="nav-number">1.4.</span> <span class="nav-text">发布/订阅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#负载均衡-1"><span class="nav-number">1.5.</span> <span class="nav-text">负载均衡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名服务-1"><span class="nav-number">1.6.</span> <span class="nav-text">命名服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式队列"><span class="nav-number">1.7.</span> <span class="nav-text">分布式队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式锁"><span class="nav-number">1.8.</span> <span class="nav-text">分布式锁</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
   
-  <entry>
-    <title><![CDATA[nio文件读写操作]]></title>
-    <link href="http://imjun.me/2016/04/12/nio%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/"/>
-    <id>http://imjun.me/2016/04/12/nio文件读写操作/</id>
-    <published>2016-04-12T06:25:06.000Z</published>
-    <updated>2016-07-26T15:34:29.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="NIO">NIO</h1><h2 id="NIO_简介">NIO 简介</h2><p>  nio 是New IO 的简称，在jdk1.4 里提供的新api 。Sun 官方标榜的特性如下： 为所有的原始类型提供(Buffer)缓存支持。字符集编码解码解决方案。 Channel ：一个新的原始I/O 抽象。 支持锁和内存映射文件的文件访问接口。 提供多路(non-bloking) 非阻塞式的高伸缩性网络I/O 。                 – 摘抄<a href="http://baike.baidu.com/link?url=0RUl92U3LPlc5CgZbBAqVtjxbkH-esxau7LX6iEWLtUBESNf7xuDuTbRJ8A3Ruf0LlD_i25c1Bt3N2r_RnMH9zDzqaZ3bgMmMLitEQ8qYfhk_2ZRqmvJW5-gtskoZDi7w9BO7mdHxXybb3KekHpul_" target="_blank" rel="external">百度百科</a></p>
-<h2 id="代码">代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.RandomAccessFile;</span><br><span class="line"><span class="keyword">import</span> java.nio.ByteBuffer;</span><br><span class="line"><span class="keyword">import</span> java.nio.channels.FileChannel;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NIO</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> bufSize = <span class="number">1000000</span>;<span class="comment">//一次读取的字节长度</span></span><br><span class="line">    File fin = <span class="keyword">new</span> File(<span class="string">"D:\\test\\readFile.txt"</span>);<span class="comment">//读取的文件</span></span><br><span class="line">    File fout = <span class="keyword">new</span> File(<span class="string">"D:\\test\\writeFile.txt"</span>);<span class="comment">//写出的文件</span></span><br><span class="line">    Date startDate = <span class="keyword">new</span> Date();</span><br><span class="line">    FileChannel fcin = <span class="keyword">new</span> RandomAccessFile(fin, <span class="string">"r"</span>).getChannel();</span><br><span class="line">    ByteBuffer rBuffer = ByteBuffer.allocate(bufSize);</span><br><span class="line"></span><br><span class="line">    FileChannel fcout = <span class="keyword">new</span> RandomAccessFile(fout, <span class="string">"rws"</span>).getChannel();</span><br><span class="line">    ByteBuffer wBuffer = ByteBuffer.allocateDirect(bufSize);</span><br><span class="line"></span><br><span class="line">    readFileByLine(bufSize, fcin, rBuffer, fcout, wBuffer);</span><br><span class="line">    Date endDate = <span class="keyword">new</span> Date();</span><br><span class="line">    </span><br><span class="line">    System.out.print(startDate+<span class="string">"|"</span>+endDate);<span class="comment">//测试执行时间</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">readFileByLine</span><span class="params">(<span class="keyword">int</span> bufSize, FileChannel fcin,</span><br><span class="line">      ByteBuffer rBuffer, FileChannel fcout, ByteBuffer wBuffer)</span> </span>&#123;</span><br><span class="line">    String enterStr = <span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">byte</span>[] bs = <span class="keyword">new</span> <span class="keyword">byte</span>[bufSize];</span><br><span class="line">      <span class="comment">//temp：由于是按固定字节读取，在一次读取中，第一行和最后一行经常是不完整的行，因此定义此变量来存储上次的最后一行和这次的第一行的内容，</span></span><br><span class="line">      <span class="comment">//并将之连接成完成的一行，否则会出现汉字被拆分成2个字节，并被提前转换成字符串而乱码的问题，数组大小应大于文件中最长一行的字节数</span></span><br><span class="line">      <span class="keyword">byte</span>[] temp = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">500</span>];</span><br><span class="line">      <span class="keyword">while</span> (fcin.read(rBuffer) != -<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> rSize = rBuffer.position();</span><br><span class="line">        rBuffer.rewind();</span><br><span class="line">        rBuffer.get(bs);</span><br><span class="line">        rBuffer.clear();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//windows下ascii值13、10是换行和回车，unix下ascii值10是换行</span></span><br><span class="line">        <span class="comment">//从开头顺序遍历，找到第一个换行符</span></span><br><span class="line">        <span class="keyword">int</span> startNum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> length=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rSize;i++)&#123;</span><br><span class="line">          <span class="keyword">if</span>(bs[i]==<span class="number">10</span>)&#123;<span class="comment">//找到换行字符</span></span><br><span class="line">            startNum=i;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">500</span>;k++)&#123;</span><br><span class="line">              <span class="keyword">if</span>(temp[k]==<span class="number">0</span>)&#123;<span class="comment">//temp已经存储了上一次读取的最后一行，因此遍历找到空字符位置，继续存储此次的第一行内容，连接成完成一行</span></span><br><span class="line">                length=i+k;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=i;j++)&#123;</span><br><span class="line">                  temp[k+j]=bs[j];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//将拼凑出来的完整的一行转换成字符串</span></span><br><span class="line">        String tempString1 = <span class="keyword">new</span> String(temp, <span class="number">0</span>, length+<span class="number">1</span>, <span class="string">"GBK"</span>);</span><br><span class="line">        <span class="comment">//清空temp数组</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;temp.length;i++)&#123;</span><br><span class="line">          temp[i]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//从末尾倒序遍历，找到第一个换行符</span></span><br><span class="line">        <span class="keyword">int</span> endNum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=rSize-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">          <span class="keyword">if</span>(bs[i]==<span class="number">10</span>)&#123;</span><br><span class="line">            endNum=i;<span class="comment">//记录最后一个换行符的位置</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;rSize;j++)&#123;</span><br><span class="line">              temp[k++]=bs[j];<span class="comment">//将此次读取的最后一行的不完整字节存储在temp数组，用来跟下一次读取的第一行拼接成完成一行</span></span><br><span class="line">              bs[j]=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//去掉第一行和最后一行不完整的，将中间所有完整的行转换成字符串</span></span><br><span class="line">        String tempString2 = <span class="keyword">new</span> String(bs, startNum+<span class="number">1</span>, endNum-startNum, <span class="string">"GBK"</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//拼接两个字符串</span></span><br><span class="line">        String tempString = tempString1 + tempString2;</span><br><span class="line"><span class="comment">//        System.out.print(tempString);</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> fromIndex = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> endIndex = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> ((endIndex = tempString.indexOf(enterStr, fromIndex)) != -<span class="number">1</span>) &#123;</span><br><span class="line">          String line = tempString.substring(fromIndex, endIndex)+enterStr;<span class="comment">//按行截取字符串</span></span><br><span class="line">          System.out.print(line);</span><br><span class="line">          <span class="comment">//写入文件</span></span><br><span class="line">          writeFileByLine(fcout, wBuffer, line);</span><br><span class="line"></span><br><span class="line">          fromIndex = endIndex + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">      e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span><br><span class="line">   * 写到文件上</span><br><span class="line">   * <span class="doctag">@param</span> fcout</span><br><span class="line">   * <span class="doctag">@param</span> wBuffer</span><br><span class="line">   * <span class="doctag">@param</span> line</span><br><span class="line">   */</span></span><br><span class="line">  <span class="annotation">@SuppressWarnings</span>(<span class="string">"static-access"</span>)</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeFileByLine</span><span class="params">(FileChannel fcout, ByteBuffer wBuffer, String line)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      fcout.write(wBuffer.wrap(line.getBytes(<span class="string">"UTF-8"</span>)), fcout.size());</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">      e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="NIO">NIO</h1><h2 id="NIO_简介">NIO 简介</h2><p>  nio 是New IO 的简称，在jdk1.4 里提供的新api 。Sun 官方标榜的特性如下： 为所有的原始类型提供(Buffer)缓存支持。字符集编码解码解决方案。 Ch]]>
-    </summary>
-    
-      <category term="NIO" scheme="http://imjun.me/tags/NIO/"/>
-    
-      <category term="java" scheme="http://imjun.me/tags/java/"/>
-    
-      <category term="java" scheme="http://imjun.me/categories/java/"/>
-    
-  </entry>
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shaojun Liu</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class=" powered-by  ">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<div class="powered-by">
+  本站总访问量 <span id="busuanzi_value_site_pv"></span> 次.
+</div>
+<div class="theme-info">
+  本站访客 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 人次.
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
   
-  <entry>
-    <title><![CDATA[我的阅历]]></title>
-    <link href="http://imjun.me/2015/12/23/%E6%88%91%E7%9A%84%E9%98%85%E5%8E%86/"/>
-    <id>http://imjun.me/2015/12/23/我的阅历/</id>
-    <published>2015-12-23T09:17:32.000Z</published>
-    <updated>2016-07-26T15:34:29.000Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<ul>
-<li>不读书是瞒不住人的。—— 不如</li>
-<li>读书根本无用，但是充满了知道的快乐。—— 微博某 “非”『著』名『程序』猿</li>
-<li>书富如入海，百货皆有。人之精力，不能兼收尽取，但得春所欲求者尔。故愿学者每次作一意求之。 —— 苏轼『东坡文集事略』</li>
-</ul>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<blockquote>
-<ul>
-<li>不读书是瞒不住人的。—— 不如</li>
-<li>读书根本无用，但是充满了知道的快乐。—— 微博某 “非”『著』名『程序』猿</li>
-<li>书富如入海，百货皆有。人之精力，不能兼收尽取，但得春所欲求者尔。故愿学者每次作一意求之。 —]]>
-    </summary>
-    
-      <category term="Photo" scheme="http://imjun.me/tags/Photo/"/>
-    
-      <category term="读书" scheme="http://imjun.me/tags/%E8%AF%BB%E4%B9%A6/"/>
-    
-      <category term="经历" scheme="http://imjun.me/categories/%E7%BB%8F%E5%8E%86/"/>
-    
-  </entry>
   
-  <entry>
-    <title><![CDATA[Swig 模版教程]]></title>
-    <link href="http://imjun.me/2015/12/04/Swig-%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/"/>
-    <id>http://imjun.me/2015/12/04/Swig-模版教程/</id>
-    <published>2015-12-04T03:29:52.000Z</published>
-    <updated>2015-12-05T10:37:28.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="让我们开始使用_Swig_模版吧！">让我们开始使用 Swig 模版吧！</h1><hr>
-<h2 id="API">API</h2><ol>
-<li><p>初始化</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">swig.init(&#123;</span><br><span class="line">         allowErrors: <span class="literal">false</span>,   </span><br><span class="line">         autoescape: <span class="literal">true</span>,</span><br><span class="line">         cache: <span class="literal">true</span>,</span><br><span class="line">         encoding: <span class="string">'utf8'</span>,</span><br><span class="line">         filters: &#123;&#125;,</span><br><span class="line">         root: <span class="string">'/'</span>,</span><br><span class="line">         tags: &#123;&#125;,</span><br><span class="line">         extensions: &#123;&#125;,</span><br><span class="line">         tzOffset: <span class="number">0</span></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>options</p>
-<ul>
-<li>allowErrors:<br>默认值为 false。将所有模板解析和编译错误直接输出到模板。如果为 true，则将引发错误，抛出到 Node.js 进程中，可能会使您的应用程序崩溃。</li>
-<li>autoescape:<br>默认true，强烈建议保持。字符转换表请参阅转义过滤器。<br>true: HTML安全转义<br>false: 不转义，除非使用转义过滤器或者转义标签<br>‘js’: js安全转义</li>
-<li>cache:<br>更改为 false 将重新编译每个请求的模板的文件。正式环境建议保持true。</li>
-<li>encoding<br>模板文件编码</li>
-<li>root<br>需要搜索模板的目录。如果模板传递给 swig.compileFile 绝对路径(以/开头)，Swig不会在模板root中搜索。如果传递一个数组，使用第一个匹配成功的数组项。</li>
-<li>tzOffset<br>设置默认时区偏移量。此设置会使转换日期过滤器会自动的修正相应时区偏移量。<br>filters 自定义过滤器或者重写默认过滤器，参见自定义过滤器指南。</li>
-<li>tags<br>自定义标签或者重写默认标签，参见自定义标签指南。<br>extensions 添加第三方库，可以在编译模板时使用，参见参见自定义标签指南。</li>
-</ul>
-</li>
-<li><p>NodeJs</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tpl = swig.compileFile(<span class="string">"path/to/template/file.html"</span>);</span><br><span class="line"><span class="keyword">var</span> renderedHtml = tpl.render(&#123; vars: <span class="string">'to be inserted in template'</span> &#125;);</span><br></pre></td></tr></table></figure>
-<p> or </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tpl = swig.compile(<span class="string">"Template string here"</span>);</span><br><span class="line"><span class="keyword">var</span> renderedHtml = tpl(&#123; vars: <span class="string">'to be inserted in template'</span> &#125;);</span><br></pre></td></tr></table></figure>
-<p> Express</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express</span><br><span class="line">$ npm install consolidate</span><br></pre></td></tr></table></figure>
-<p> Then </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.engine(<span class="string">'.html'</span>, cons.swig);</span><br><span class="line">app.set(<span class="string">'view engine'</span>, <span class="string">'html'</span>);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<ol>
-<li><p>浏览器</p>
-<blockquote>
-<p>Swig浏览器版本的api基本与nodejs版相同，不同点如下：<br>不能使用<code>swig.compileFile</code>，浏览器没有文件系统<br>你必须提前使用<code>swig.compile</code>编译好模板<br>按顺序使用<code>extends</code>, <code>import</code>, and <code>include</code>，同时在<code>swig.compile</code>里使用参数<code>templateKey</code>来查找模板</p>
-</blockquote>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">var template = swig.compile('<span class="tag">&lt;<span class="title">p</span>&gt;</span></span><span class="template_tag">&#123;% <span class="keyword">block</span> content %&#125;</span><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml"><span class="tag">&lt;/<span class="title">p</span>&gt;</span>', &#123; filename: 'main' &#125;);</span><br><span class="line">            var mypage = swig.compile('</span><span class="template_tag">&#123;% <span class="keyword">extends</span> "main" %&#125;</span><span class="xml"></span><br><span class="line">                    </span><span class="template_tag">&#123;% <span class="keyword">block</span> content %&#125;</span><span class="xml"></span><br><span class="line">                        Oh hey there!</span><br><span class="line">                    </span><span class="template_tag">&#123;% <span class="keyword">endblock</span> %&#125;</span><span class="xml">',</span><br><span class="line">             &#123; filename: 'mypage' &#125;);</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>基础</p>
-<ul>
-<li><p>变量<br><code></code><br><code></code></p>
-<blockquote>
-<p>如果变量未定义，输出空字符。变量可以通过过滤器来修改：<br>  <code>\{\{ name|title \}\}</code> was born on <code>{ { birthday|date(&#39;F jS, Y&#39;) } }</code></p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Jane was born on July 6th, 1985</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>逻辑标签  参见<a href="#tag">标签</a>部分。</p>
-</li>
-</ul>
-<h4 id="注释">注释</h4><h4 id="空白">空白</h4><blockquote>
-<p>模板里的空白在最终输出时默认保留，如果需要去掉空白，可以在逻辑标签前后加上空白控制服-：</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">for</span> item <span class="keyword">in</span> seq -%&#125;</span><br><span class="line">    &#123;&#123; item &#125;&#125;</span><br><span class="line">&#123;%- endfor %&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="模板继承">模板继承</h3><blockquote>
-<p>Swig 使用 extends 和 block 来实现模板继承</p>
-</blockquote>
-<pre><code><span class="comment"><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">layout.html</span><br><span class="line"></span><br><span class="line"><span class="doctype">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">title</span>&gt;</span>&#123;% block title %&#125;My Site&#123;% endblock %&#125;<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    &#123;% block head %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"main.css"</span>&gt;</span></span><br><span class="line">    &#123;% endblock %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">    &#123;% block content %&#125;&#123;% endblock %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br><span class="line">  `index.html`</span><br><span class="line">  &#123;% extends 'layout.html' %&#125;</span><br><span class="line">  </span><br><span class="line">  &#123;% block title %&#125;My Page&#123;% endblock %&#125;</span><br><span class="line">  </span><br><span class="line">  &#123;% block head %&#125;</span><br><span class="line">  &#123;% parent %&#125;</span><br><span class="line">      <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"custom.css"</span>&gt;</span></span><br><span class="line">  &#123;% endblock %&#125;</span><br><span class="line">  </span><br><span class="line">  &#123;% block content %&#125;</span><br><span class="line">      <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is just an awesome page.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">  &#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></span>
-</code></pre><h3 id="变量过滤器">变量过滤器</h3><pre><code>&gt; 用于修改变量。变量名称后用 | 字符分隔添加过滤器。您可以添加多个过滤器。
 
-  Example
-
-  <span class="comment"><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; name|title &#125;&#125; was born on &#123;&#123; birthday|date(<span class="string">'F jS, Y'</span>) &#125;&#125;</span><br><span class="line">and has &#123;&#123; bikes|length|<span class="keyword">default</span>(<span class="string">"zero"</span>) &#125;&#125; bikes.</span><br></pre></td></tr></table></figure></span>
-
-
-  &gt; 也可以使用 filter 标签来为块内容添加过滤器
-
-  <span class="comment"><figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% <span class="keyword">filter</span> upper %&#125;</span><span class="xml">oh hi, paul</span><span class="template_tag">&#123;% <span class="keyword">endfilter</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></span>
-</code></pre><p>  ###内置过滤器<br>  <code>add(value)</code> </p>
-<blockquote>
-<p>使变量与value相加，可以转换为数值字符串会自动转换为数值。<br>addslashes<br>用 \ 转义字符串<br>   <code>capitalize</code><br>   <strong>大写首字母</strong><br>   <code>date(format[, tzOffset])</code><br>  <strong>转换日期为指定格式</strong><br>  <code>format</code>： 格式<br>  <code>tzOffset</code>： 时区<br>  <code>default(value)</code><br>  默认值（如果变量为<code>undefined</code>，<code>null</code>，<code>false</code>）<br>  <code>e</code> 同<code>escape</code><br>  <code>escape([type])</code><br>  <strong>转义字符</strong><br>  默认： <code>&amp;</code>,<code>&lt;</code>, <code>&gt;</code>,<code>&quot;</code>,<code>&#39;</code><br>  <code>js</code>: <code>&amp;</code>,<code>&lt;</code>,<code>&gt;</code>,<code>&quot;</code>, <code>&#39;</code>, <code>=</code>,<code>-</code>,<code>;</code><br>  <code>first</code><br>  返回数组第一个值<br>  <code>join(glue)</code><br>  同<code>[].join</code><br>  <code>json_encode([indent])</code><br>  类似<code>JSON.stringify, indent</code>为缩进空格数<br>  <code>last</code><br>  返回数组最后一个值<br>  <code>length</code><br>  返回变量的length，如果是object，返回key的数量<br>  <code>lower</code><br>  同’’.toLowerCase()<br>  <code>raw</code><br>  指定输入不会被转义<br>  <code>replace(search, replace[, flags])</code><br>  同’’.replace<br>  <code>reverse</code><br>  翻转数组<br>  <code>striptags</code><br>  去除<code>html/xml</code>标签<br>  <code>title</code><br>  大写首字母<br>  <code>uniq</code><br>  数组去重<br>  <code>upper</code><br>  同<code>&#39;&#39;.toUpperCase</code><br>  <code>url_encode</code><br>  同<code>encodeURIComponent</code><br>  <code>url_decode</code><br>  同<code>decodeURIComponemt</code><br>  <strong>自定义过滤器</strong><br>  创建一个 myfilter.js 然后引入到 Swig 的初始化函数中<br>  <code>swig.init({ filters: require(&#39;myfilters&#39;) });</code><br>  在<code>myfilter.js</code> 里，每一个 <code>filter</code>方法都是一个简单的<code>js</code>方法，下例是一个翻转字符串的 filter：</p>
-</blockquote>
-  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">exports.myfilter = <span class="function"><span class="keyword">function</span> (<span class="params">input</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> input.toString().split(<span class="string">''</span>).reverse().join(<span class="string">''</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>你的 <code>filter</code>一旦被引入，你就可以向下面一样使用：<br>  <code>{ { name|myfilter } }</code><br>  <code>{ % filter myfilter % }I shall be filtered{ % endfilter % }</code><br>   你也可以像下面一样给 filter 传参数：</p>
-</blockquote>
-  <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">exports.<span class="keyword">prefix</span> = function(input, <span class="keyword">prefix</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">prefix</span>.<span class="built_in">toString</span>() + input.<span class="built_in">toString</span>();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>  <code>{ { name|prefix(&#39;my prefix&#39;) } }</code></p>
-<pre><code><span class="escape">`{</span> <span class="var_expand">% filter prefix 'my prefix' %</span>}I will be prefixed with <span class="string">"my prefix"</span>.   { <span class="var_expand">% endfilter %</span> }<span class="escape">`
-</span>  <span class="escape">`{</span> <span class="var_expand">% filter prefix foo %</span> }<span class="escape">`I</span> will be prefixed with the value stored to <span class="escape">`f</span>oo<span class="escape">`.</span><span class="escape">`{</span> <span class="var_expand">% endfilter %</span> }`
-</code></pre><h2 id="标签"><a id="tag" href=":;">标签</a></h2><h3 id="内置标签">内置标签</h3><ul>
-<li>extends<br>使当前模板继承父模板，必须在文件最前<ul>
-<li>参数： </li>
-<li>file:<br>父模板相对模板 root 的相对路径</li>
-</ul>
-</li>
-<li>block<br>定义一个块，使之可以被继承的模板重写，或者重写父模板的同名块<ul>
-<li>参数： </li>
-<li>name:<br>块的名字，必须以字母数字下划线开头</li>
-</ul>
-</li>
-<li>parent<br>将父模板中同名块注入当前块中</li>
-<li>include<br>包含一个模板到当前位置，这个模板将使用当前上下文<ul>
-<li>参数： </li>
-<li>file:<br>包含模板相对模板 root 的相对路径 </li>
-</ul>
-</li>
-<li>ignore missing:<br>包含模板不存在也不会报错 </li>
-<li>with x:<br>设置 x 至根上下文对象以传递给模板生成。必须是一个键值对 </li>
-<li><p>only:<br>限制模板上下文中用 with x 定义的参数</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">  &#123; % include template_path % &#125;</span><br><span class="line">  &#123; % include "path/to/template.js" % &#125; </span><br><span class="line">  //你可以标记 ignore missing，这样如果模板不存在，也不会抛出错误</span><br><span class="line">  &#123; % include "foobar.html" ignore missing % &#125;</span><br><span class="line">  //本地声明的上下文变量，默认情况不会传递给包含的模板。例如以下情况，inc.html 无法得到 foo 和 bar</span><br><span class="line">  &#123;% set foo = "bar" %&#125;</span><br><span class="line">  &#123; % include "inc.html" % &#125;</span><br><span class="line">  </span><br><span class="line">    &#123;% for bar in thing %&#125;</span><br><span class="line">     &#123; % include "inc.html" % &#125;</span><br><span class="line">  &#123;% endfor %&#125;</span><br><span class="line">  //如果想把本地声明的变量引入到包含的模板种，可以使用 with 参数来把后面的对象创建到包含模板的上下文中</span><br><span class="line">  &#123;% set foo = &#123; bar: "baz" &#125; %&#125;</span><br><span class="line">  &#123; % include "inc.html" with foo % &#125;</span><br><span class="line">  </span><br><span class="line">  &#123;% for bar in thing %&#125;</span><br><span class="line">      &#123; % include "inc.html" with bar % &#125;</span><br><span class="line">  &#123;% endfor %&#125;    </span><br><span class="line">```         </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &gt; 如果当前上下文中 foo 和 bar 可用，下面的情况中，只有 foo 会被 inc.html 定义</span><br><span class="line">  `&#123; %  `include` "inc.html" with foo only % &#125;`</span><br><span class="line">  `only` </span><br><span class="line">    必须作为最后一个参数，放在其他位置会被忽略</span><br><span class="line">  **raw** </span><br><span class="line">    停止解析标记中任何内容，所有内容都将输出</span><br><span class="line">  参数:</span><br><span class="line">  **file:** </span><br><span class="line">     父模板相对模板 root 的相对路径</span><br><span class="line">  **for** </span><br><span class="line">     遍历对象和数组</span><br><span class="line">  参数:</span><br><span class="line">      x: 当前循环迭代名 </span><br><span class="line">     in: 语法标记 </span><br><span class="line">      y: 可迭代对象。可以使用过滤器修改</span><br><span class="line"></span><br><span class="line">  ``` js</span><br><span class="line">  &#123;% for x in y %&#125;</span><br><span class="line">      &#123;% if loop.first %&#125;&lt;ul&gt;&#123;% endif %&#125;</span><br><span class="line">      &lt;li&gt;&#123;&#123; loop.index &#125;&#125; - &#123;&#123; loop.key &#125;&#125;: &#123;&#123; x &#125;&#125;&lt;/li&gt;</span><br><span class="line">      &#123;% if loop.last %&#125;&lt;/ul&gt;&#123;% endif %&#125;</span><br><span class="line">  &#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>特殊循环变量</strong> </p>
-<blockquote>
-<p>loop.index：当前循环的索引（1开始）<br>  loop.index0：当前循环的索引（0开始）<br>  loop.revindex：当前循环从结尾开始的索引（1开始）<br>  loop.revindex0：当前循环从结尾开始的索引（0开始）<br>  loop.key：如果迭代是对象，是当前循环的键，否则同 loop.index<br>  loop.first：如果是第一个值返回 true<br>  loop.last：如果是最后一个值返回 true<br>  loop.cycle：一个帮助函数，以指定的参数作为周期</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;% for item in items %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"&#123;&#123; loop.cycle('odd', 'even') &#125;&#125;"</span>&gt;</span>&#123;&#123; item &#125;&#125;<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">&#123;% endfor %&#125;</span><br><span class="line">在 for 标签里使用 else</span><br><span class="line">&#123;% for person in people %&#125;</span><br><span class="line">    &#123;&#123; person &#125;&#125;</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">    There are no people yet!</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
-<p><code>if</code> 条件语句 </p>
-<blockquote>
-<p>参数：  接受任何有效的 JavaScript 条件语句，以及一些其他人类可读语法</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">  &#123;% <span class="keyword">if</span> x %&#125;&#123;% endif %&#125;</span><br><span class="line">  &#123;% <span class="keyword">if</span> !x %&#125;&#123;% endif %&#125;</span><br><span class="line">  &#123;% <span class="keyword">if</span> not x %&#125;&#123;% endif %&#125;</span><br><span class="line">  &#123;% <span class="keyword">if</span> x and y %&#125;&#123;% endif %&#125;</span><br><span class="line">  &#123;% <span class="keyword">if</span> x &amp;&amp; y %&#125;&#123;% endif %&#125;</span><br><span class="line">  &#123;% <span class="keyword">if</span> x or y %&#125;&#123;% endif %&#125;</span><br><span class="line">  &#123;% <span class="keyword">if</span> x || y %&#125;&#123;% endif %&#125;</span><br><span class="line">  &#123;% <span class="keyword">if</span> x || (y &amp;&amp; z) %&#125;&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% <span class="keyword">if</span> x [operator] y %&#125;</span><br><span class="line">    Operators: ==, !=, <span class="xml"><span class="tag">&lt;<span class="title">,</span> &lt;=<span class="value">,</span> &gt;</span>, &gt;=, ===, !==</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% if x == 'five' %&#125;</span><br><span class="line">    The operands can be also be string or number literals</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% if x|length === 3 %&#125;</span><br><span class="line">    You can use filters on any operand in the statement.</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% if x in y %&#125;</span><br><span class="line">    If x is a value that is present in y, this will return true.</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">else 和 else if</span><br><span class="line">&#123;% if foo %&#125;</span><br><span class="line">    Some content.</span><br><span class="line">&#123;% else if "foo" in bar %&#125;</span><br><span class="line">    Content if the array `bar` has "foo" in it.</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">    Fallback content.</span><br><span class="line">&#123;% endif %&#125;</span></span><br></pre></td></tr></table></figure>
-<p><code>autoescape</code>  改变当前变量的自动转义行为</p>
-<p>参数： </p>
-<ul>
-<li>on:当前内容是否转义</li>
-<li>type: 转义类型，js 或者 html，默认 html</li>
-<li>假设 some_html_output = ‘<p>Hello “you” &amp; \’them\’</p>‘;</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#123;% autoescape false %&#125;</span><br><span class="line">    &#123;&#123; some_html_output &#125;&#125;</span><br><span class="line">&#123;% endautoescape %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% autoescape true %&#125;</span><br><span class="line">    &#123;&#123; some_html_output &#125;&#125;</span><br><span class="line">&#123;% endautoescape %&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#123;% autoescape true "js" %&#125;</span><br><span class="line">    &#123;&#123; some_html_output &#125;&#125;</span><br><span class="line">&#123;% endautoescape %&#125;</span><br><span class="line">将会输出</span><br><span class="line">&lt;p&gt;Hello "you" &amp; 'them'&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&amp;lt;p&amp;gt;Hello &amp;quot;you&amp;quot; &amp;amp; &amp;#39;them&amp;#39; &amp;lt;/p&amp;gt;</span><br><span class="line"></span><br><span class="line">\u003Cp\u003EHello \u0022you\u0022 &amp; \u0027them\u0027\u003C\u005Cp\u003E</span><br></pre></td></tr></table></figure>
-<p><code>set</code> 设置一个变量，在当前上下文中复用</p>
-<blockquote>
-<p>参数： </p>
-<pre><code><span class="escape">`n</span>ame<span class="escape">`:</span> 变量名 =: 语法标记 
-<span class="escape">`v</span>alue<span class="escape">`:</span> 变量值
-</code></pre></blockquote>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template_tag">&#123;% set foo = [0, 1, 2, 3, 4, 5] %&#125;</span><span class="xml"></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">for</span> num <span class="keyword">in</span> foo %&#125;</span><span class="xml"></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span>&gt;</span></span><span class="variable">&#123;&#123; num &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"></span><span class="template_tag">&#123;% <span class="keyword">endfor</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>  <code>macro</code> </p>
-<blockquote>
-<p>创建自定义可服用的代码段<br>  <strong>参数</strong>：<br>…:<br>    用户定义</p>
-</blockquote>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;% macro input type name id label value error %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"&#123;&#123; name &#125;&#125;"</span>&gt;</span>&#123;&#123; label &#125;&#125;<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"&#123;&#123; type &#125;&#125;"</span> <span class="attribute">name</span>=<span class="value">"&#123;&#123; name &#125;&#125;"</span> <span class="attribute">id</span>=<span class="value">"&#123;&#123; id &#125;&#125;"</span> <span class="attribute">value</span>=<span class="value">"&#123;&#123; value &#125;&#125;"</span><span class="value">&#123;%</span> <span class="attribute">if</span> <span class="attribute">error</span> %&#125; <span class="attribute">class</span>=<span class="value">"error"</span><span class="value">&#123;%</span> <span class="attribute">endif</span> %&#125;&gt;</span></span><br><span class="line">&#123;% endmacro %&#125;</span><br><span class="line">然后像下面使用</span><br><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span>&#123;&#123; input("text", "fname", "fname", "First Name", fname.value, fname.errors) &#125;&#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span>&#123;&#123; input("text", "lname", "lname", "Last Name", lname.value, lname.errors) &#125;&#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">输出如下</span><br><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"fname"</span>&gt;</span>First Name<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"fname"</span> <span class="attribute">id</span>=<span class="value">"fname"</span> <span class="attribute">value</span>=<span class="value">"Paul"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">label</span> <span class="attribute">for</span>=<span class="value">"lname"</span>&gt;</span>Last Name<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"lname"</span> <span class="attribute">id</span>=<span class="value">"lname"</span> <span class="attribute">value</span>=<span class="value">""</span> <span class="attribute">class</span>=<span class="value">"error"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>  <code>import</code></p>
-<blockquote>
-<p>允许引入另一个模板的宏进入当前上下文<br>参数：<br><code>file</code>:<br>引入模板相对模板 root 的相对路径<br>  as:<br>语法标记 var: 分配给宏的可访问上下文对象</p>
-</blockquote>
-  <figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="collection">&#123;% import 'formmacros.html' as form %&#125;</span></span><br><span class="line">  </span><br><span class="line"><span class="collection">&#123;# this will run the input macro #&#125;</span></span><br><span class="line"><span class="collection">&#123;<span class="collection">&#123; form.input<span class="list">(<span class="string">"text"</span>, <span class="string">"name"</span>)</span> &#125;</span>&#125;</span></span><br><span class="line">  </span><br><span class="line"><span class="collection">&#123;# this, however, will NOT output anything because the macro is scoped to the <span class="string">"form"</span> object: #&#125;</span></span><br><span class="line"><span class="collection">&#123;<span class="collection">&#123; input<span class="list">(<span class="string">"text"</span>, <span class="string">"name"</span>)</span> &#125;</span>&#125;</span></span><br></pre></td></tr></table></figure>
-<p>  <strong>filter</strong> </p>
-<blockquote>
-<p>对整个块应用过滤器<br>  参数：<br>  <strong>filter_name:</strong><br>过滤器名字 … :<br>  若干传给过滤器的参数 父模板相对模板 root 的相对路径</p>
-</blockquote>
-  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% filter uppercase % &#125;oh hi, &#123;&#123; name &#125;&#125;&#123; % endfilter % &#125;&#10;&#123;% filter replace &#34;.&#34; &#34;!&#34; &#34;g&#34; % &#125;Hi. My name is Paul.&#123; % endfilter % &#125;</span><br></pre></td></tr></table></figure>
-<p>输出<br><code>// OH HI, PAUL
-// Hi! My name is Paul!</code><br><code>//spaceless</code><br>//尝试移除html标签间的空格</p>
-  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% spaceless %&#125;&#10;&#123;% for num in foo %&#125;&#10;    &#60;li&#62;&#123;&#123; loop.index &#125;&#125;&#60;/li&#62;&#10;&#123;% endfor %&#125;&#10;&#123;% endspaceless %&#125;</span><br></pre></td></tr></table></figure>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">li</span>&gt;</span>1<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>2<span class="tag">&lt;/<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">li</span>&gt;</span>3<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意： 这里面为了一些标签和函数避免解析时报错，所以我修改了下。请用的时候记得修复它 ，谢谢！</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="让我们开始使用_Swig_模版吧！">让我们开始使用 Swig 模版吧！</h1><hr>
-<h2 id="API">API</h2><ol>
-<li><p>初始化</p>
-<figure class="highlight javascript"><table><]]>
-    </summary>
-    
-      <category term="javascript" scheme="http://imjun.me/tags/javascript/"/>
-    
-      <category term="nodeJs" scheme="http://imjun.me/tags/nodeJs/"/>
-    
-      <category term="swig" scheme="http://imjun.me/tags/swig/"/>
-    
-      <category term="前端" scheme="http://imjun.me/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
   
-  <entry>
-    <title><![CDATA[简单美观的文字标签云组件]]></title>
-    <link href="http://imjun.me/2015/12/03/beautiful-word-cloud/"/>
-    <id>http://imjun.me/2015/12/03/beautiful-word-cloud/</id>
-    <published>2015-12-03T14:10:40.000Z</published>
-    <updated>2015-12-07T14:08:14.000Z</updated>
-    <content type="html"><![CDATA[<p>  </p>
-  <div class="entry">
-
-<p>经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用office一样制作信息图（infographic），而不是用专业的制图工具。这一步跨过去，看到的将是欣欣向荣的真正大数据时代。</p>
-<p>而这之前，首先缺少的就是，可以让普通开发人员使用的大数据时代的可视化图表组件，比如标签云图，所幸，业界已经有<a href="http://github.com/ecomfe/echarts" target="_blank" rel="external">ECharts</a>和<a href="http://github.com/timdream/wordcloud" target="_blank" rel="external">WordCloud</a>这两大利器，本文只介绍后者。</p>
-<p><img src="http://bruce.u.qiniudn.com/2014/02/10/wordcloud-cn.jpg" alt="中文"></p>
-<p><a id="more"></a></p>
-<p>首先页面必须是html5编写。</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">“UTF-8”</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="title">body</span>&gt;</span>    </span><br><span class="line"> <span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>引入<a href="http://jquery.com/" target="_blank" rel="external">jQuery</a>和<a href="http://github.com/timdream/wordcloud2.js" target="_blank" rel="external">WordCloud2.js</a>。</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">“src/wordcloud2.js”</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">“//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js”</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>定义canvas容器。</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">&lt;<span class="tag">div</span> id=<span class="string">“canvas-container”</span> align=<span class="string">“center”</span>&gt;</span><br><span class="line"> &lt;<span class="tag">canvas</span> id=<span class="string">“canvas”</span> <span class="attribute">width</span>=<span class="string">“800px”</span> <span class="attribute">height</span>=<span class="string">“600px”</span>&gt;&lt;/canvas&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>绘图。</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="prolog"> </span><br><span class="line"><span class="atom">var</span> <span class="atom">options</span> = <span class="atom">eval</span>(&#123;</span><br><span class="line">  <span class="string">“list”</span>: [[<span class="string">‘傻猎豹’</span>, <span class="number">10</span>], [<span class="string">‘不如’</span>, <span class="number">9</span>], [<span class="string">‘麻花疼’</span>, <span class="number">7</span>], [<span class="string">‘麻云’</span>, <span class="number">6</span>],[<span class="string">‘李眼红’</span>, <span class="number">4</span>], [<span class="string">‘雷布斯’</span>, <span class="number">5</span>],[<span class="string">‘周红衣’</span>, <span class="number">4</span>],[<span class="string">‘刘墙洞’</span>, <span class="number">3</span>],[<span class="string">‘李国情’</span>, <span class="number">3</span>]],</span><br><span class="line">  <span class="string">“gridSize”</span>: <span class="number">8</span>,</span><br><span class="line">  <span class="string">“weightFactor”</span>: <span class="number">16</span>,</span><br><span class="line">  <span class="string">“fontFamily”</span>: <span class="string">‘Hiragino Mincho Pro, serif’</span>,</span><br><span class="line">  <span class="string">“color”</span>: <span class="string">‘random-dark’</span>,</span><br><span class="line">  <span class="string">“backgroundColor”</span>: <span class="string">‘#f0f0f0’</span>,</span><br><span class="line">  <span class="string">“rotateRatio”</span>: <span class="number">0</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="atom">var</span> <span class="atom">canvas</span> = <span class="atom">document</span>.<span class="atom">getElementById</span>(<span class="string">‘canvas’</span>);</span><br><span class="line"></span><br><span class="line"><span class="name">WordCloud</span>(<span class="atom">canvas</span>, <span class="atom">options</span>);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure><br>&gt; 至此，全部完毕。执行页面，美丽的云图便展现在你面前，具体的API可以参考<a href="http://github.com/timdream/wordcloud2.js/blob/master/API.md" target="_blank" rel="external">这里</a>。<br><br>下面举个英文的例子，为了美观稍微改变一下参数：<br><br><figure class="highlight prolog"><table><tr><td class="code"><pre><span class="line"><span class="string">“list”</span>: [[<span class="string">‘bruce-sha’</span>, <span class="number">10</span>], [<span class="string">‘buru’</span>, <span class="number">9</span>], [<span class="string">‘tencent’</span>, <span class="number">7</span>], [<span class="string">‘alibaba’</span>, <span class="number">6</span>], [<span class="string">‘baidu’</span>, <span class="number">4</span>], [<span class="string">‘xiaomi’</span>, <span class="number">5</span>],[<span class="string">‘360’</span>, <span class="number">4</span>],[<span class="string">‘jingdong’</span>, <span class="number">3</span>],[<span class="string">‘dangdang’</span>, <span class="number">3</span>],[<span class="string">‘ibruce.info’</span>, <span class="number">1</span>]],</span><br><span class="line"><span class="string">“gridSize”</span>: <span class="number">16</span>,</span><br><span class="line"><span class="string">“weightFactor”</span>: <span class="number">16</span>,</span><br><span class="line"><span class="string">“fontFamily”</span>: <span class="string">‘Times, serif’</span>,</span><br><span class="line"><span class="string">“color”</span>: <span class="string">‘random-light’</span>,</span><br><span class="line"><span class="string">“backgroundColor”</span>: <span class="string">‘#333’</span>,</span><br><span class="line"><span class="string">“rotateRatio”</span>: <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="http://bruce.u.qiniudn.com/2014/02/10/wordcloud-en.jpg" alt="英文"></p>
-</div>]]></content>
-    <summary type="html">
-    <![CDATA[<p>  </p>
-  <div class="entry">
-
-<p>经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用office一样制作信息图（infographic），而不是用专业的制图工具。]]>
-    </summary>
     
-      <category term="WordCloud" scheme="http://imjun.me/tags/WordCloud/"/>
-    
-      <category term="javascript" scheme="http://imjun.me/tags/javascript/"/>
-    
-      <category term="前端" scheme="http://imjun.me/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
+
   
-</feed>
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"imjun"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
+  
+
+
+  
+  
+
+</body>
+</html>

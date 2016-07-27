@@ -39,7 +39,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 <link href="/vendors/fontdiao/css/fontdiao.css?v=0.0.8" rel="stylesheet" type="text/css" />
 
-  <meta name="keywords" content="WordCloud,javascript," />
+  <meta name="keywords" content="NIO,java," />
 
 
 
@@ -57,21 +57,19 @@
 
 
 
-<meta name="description" content="经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用office一样制作信息图（infographic），而不是用专业的制图工具。这一步跨过去，看到的将是欣欣向荣的真正大数据时代。
-而这之前，首先缺少的就是，可以让普通开发人员使用的大数据时代的可视化图表组件，比如标签云图，所幸，业界已经有ECharts和WordClou">
+<meta name="description" content="NIONIO 简介  nio 是New IO 的简称，在jdk1.4 里提供的新api 。Sun 官方标榜的特性如下： 为所有的原始类型提供(Buffer)缓存支持。字符集编码解码解决方案。 Channel ：一个新的原始I/O 抽象。 支持锁和内存映射文件的文件访问接口。 提供多路(non-bloking) 非阻塞式的高伸缩性网络I/O 。                 – 摘抄百度百科
+代码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="简单美观的文字标签云组件">
-<meta property="og:url" content="http://imjun.me/2015/12/03/beautiful-word-cloud/index.html">
+<meta property="og:title" content="nio文件读写操作">
+<meta property="og:url" content="http://imjun.me/2016/04/12/nio文件读写操作/index.html">
 <meta property="og:site_name" content="Brook's Room">
-<meta property="og:description" content="经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用office一样制作信息图（infographic），而不是用专业的制图工具。这一步跨过去，看到的将是欣欣向荣的真正大数据时代。
-而这之前，首先缺少的就是，可以让普通开发人员使用的大数据时代的可视化图表组件，比如标签云图，所幸，业界已经有ECharts和WordClou">
-<meta property="og:image" content="http://bruce.u.qiniudn.com/2014/02/10/wordcloud-cn.jpg">
-<meta property="og:image" content="http://bruce.u.qiniudn.com/2014/02/10/wordcloud-en.jpg">
-<meta property="og:updated_time" content="2015-12-07T14:08:14.000Z">
+<meta property="og:description" content="NIONIO 简介  nio 是New IO 的简称，在jdk1.4 里提供的新api 。Sun 官方标榜的特性如下： 为所有的原始类型提供(Buffer)缓存支持。字符集编码解码解决方案。 Channel ：一个新的原始I/O 抽象。 支持锁和内存映射文件的文件访问接口。 提供多路(non-bloking) 非阻塞式的高伸缩性网络I/O 。                 – 摘抄百度百科
+代码">
+<meta property="og:updated_time" content="2016-07-26T15:34:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="简单美观的文字标签云组件">
-<meta name="twitter:description" content="经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用office一样制作信息图（infographic），而不是用专业的制图工具。这一步跨过去，看到的将是欣欣向荣的真正大数据时代。
-而这之前，首先缺少的就是，可以让普通开发人员使用的大数据时代的可视化图表组件，比如标签云图，所幸，业界已经有ECharts和WordClou">
+<meta name="twitter:title" content="nio文件读写操作">
+<meta name="twitter:description" content="NIONIO 简介  nio 是New IO 的简称，在jdk1.4 里提供的新api 。Sun 官方标榜的特性如下： 为所有的原始类型提供(Buffer)缓存支持。字符集编码解码解决方案。 Channel ：一个新的原始I/O 抽象。 支持锁和内存映射文件的文件访问接口。 提供多路(non-bloking) 非阻塞式的高伸缩性网络I/O 。                 – 摘抄百度百科
+代码">
 
 
 
@@ -83,7 +81,7 @@
   };
 </script>
 
-  <title> 简单美观的文字标签云组件 | Brook's Room </title>
+  <title> nio文件读写操作 | Brook's Room </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -259,7 +257,7 @@
             
             
               
-                简单美观的文字标签云组件
+                nio文件读写操作
               
             
           </h1>
@@ -268,8 +266,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-03T22:10:40+08:00" content="2015-12-03">
-              2015-12-03
+            <time itemprop="dateCreated" datetime="2016-04-12T14:25:06+08:00" content="2016-04-12">
+              2016-04-12
             </time>
           </span>
 
@@ -278,8 +276,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
                   </a>
                 </span>
 
@@ -294,8 +292,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/03/beautiful-word-cloud/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/beautiful-word-cloud/" itemprop="commentsCount"></span>
+                <a href="/2016/04/12/nio文件读写操作/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/12/nio文件读写操作/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -314,27 +312,9 @@
       
 
       
-        <span itemprop="articleBody"><p>  </p>
-  <div class="entry">
-
-<p>经常在微博或微信的文章中看到漂亮的分析图。我认为在大数据的时代，目前最关键的就是如何让非专业人员轻松的进行数据分析，比如可以象使用office一样制作信息图（infographic），而不是用专业的制图工具。这一步跨过去，看到的将是欣欣向荣的真正大数据时代。</p>
-<p>而这之前，首先缺少的就是，可以让普通开发人员使用的大数据时代的可视化图表组件，比如标签云图，所幸，业界已经有<a href="http://github.com/ecomfe/echarts" target="_blank" rel="external">ECharts</a>和<a href="http://github.com/timdream/wordcloud" target="_blank" rel="external">WordCloud</a>这两大利器，本文只介绍后者。</p>
-<p><img src="http://bruce.u.qiniudn.com/2014/02/10/wordcloud-cn.jpg" alt="中文"></p>
-<p><a id="more"></a></p>
-<p>首先页面必须是html5编写。</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">“UTF-8”</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="title">body</span>&gt;</span>    </span><br><span class="line"> <span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>引入<a href="http://jquery.com/" target="_blank" rel="external">jQuery</a>和<a href="http://github.com/timdream/wordcloud2.js" target="_blank" rel="external">WordCloud2.js</a>。</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">“src/wordcloud2.js”</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">“//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js”</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>定义canvas容器。</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">&lt;<span class="tag">div</span> id=<span class="string">“canvas-container”</span> align=<span class="string">“center”</span>&gt;</span><br><span class="line"> &lt;<span class="tag">canvas</span> id=<span class="string">“canvas”</span> <span class="attribute">width</span>=<span class="string">“800px”</span> <span class="attribute">height</span>=<span class="string">“600px”</span>&gt;&lt;/canvas&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>绘图。</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="prolog"> </span><br><span class="line"><span class="atom">var</span> <span class="atom">options</span> = <span class="atom">eval</span>(&#123;</span><br><span class="line">  <span class="string">“list”</span>: [[<span class="string">‘傻猎豹’</span>, <span class="number">10</span>], [<span class="string">‘不如’</span>, <span class="number">9</span>], [<span class="string">‘麻花疼’</span>, <span class="number">7</span>], [<span class="string">‘麻云’</span>, <span class="number">6</span>],[<span class="string">‘李眼红’</span>, <span class="number">4</span>], [<span class="string">‘雷布斯’</span>, <span class="number">5</span>],[<span class="string">‘周红衣’</span>, <span class="number">4</span>],[<span class="string">‘刘墙洞’</span>, <span class="number">3</span>],[<span class="string">‘李国情’</span>, <span class="number">3</span>]],</span><br><span class="line">  <span class="string">“gridSize”</span>: <span class="number">8</span>,</span><br><span class="line">  <span class="string">“weightFactor”</span>: <span class="number">16</span>,</span><br><span class="line">  <span class="string">“fontFamily”</span>: <span class="string">‘Hiragino Mincho Pro, serif’</span>,</span><br><span class="line">  <span class="string">“color”</span>: <span class="string">‘random-dark’</span>,</span><br><span class="line">  <span class="string">“backgroundColor”</span>: <span class="string">‘#f0f0f0’</span>,</span><br><span class="line">  <span class="string">“rotateRatio”</span>: <span class="number">0</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="atom">var</span> <span class="atom">canvas</span> = <span class="atom">document</span>.<span class="atom">getElementById</span>(<span class="string">‘canvas’</span>);</span><br><span class="line"></span><br><span class="line"><span class="name">WordCloud</span>(<span class="atom">canvas</span>, <span class="atom">options</span>);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure><br>&gt; 至此，全部完毕。执行页面，美丽的云图便展现在你面前，具体的API可以参考<a href="http://github.com/timdream/wordcloud2.js/blob/master/API.md" target="_blank" rel="external">这里</a>。<br><br>下面举个英文的例子，为了美观稍微改变一下参数：<br><br><figure class="highlight prolog"><table><tr><td class="code"><pre><span class="line"><span class="string">“list”</span>: [[<span class="string">‘bruce-sha’</span>, <span class="number">10</span>], [<span class="string">‘buru’</span>, <span class="number">9</span>], [<span class="string">‘tencent’</span>, <span class="number">7</span>], [<span class="string">‘alibaba’</span>, <span class="number">6</span>], [<span class="string">‘baidu’</span>, <span class="number">4</span>], [<span class="string">‘xiaomi’</span>, <span class="number">5</span>],[<span class="string">‘360’</span>, <span class="number">4</span>],[<span class="string">‘jingdong’</span>, <span class="number">3</span>],[<span class="string">‘dangdang’</span>, <span class="number">3</span>],[<span class="string">‘ibruce.info’</span>, <span class="number">1</span>]],</span><br><span class="line"><span class="string">“gridSize”</span>: <span class="number">16</span>,</span><br><span class="line"><span class="string">“weightFactor”</span>: <span class="number">16</span>,</span><br><span class="line"><span class="string">“fontFamily”</span>: <span class="string">‘Times, serif’</span>,</span><br><span class="line"><span class="string">“color”</span>: <span class="string">‘random-light’</span>,</span><br><span class="line"><span class="string">“backgroundColor”</span>: <span class="string">‘#333’</span>,</span><br><span class="line"><span class="string">“rotateRatio”</span>: <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="http://bruce.u.qiniudn.com/2014/02/10/wordcloud-en.jpg" alt="英文"></p>
-</div></span>
+        <span itemprop="articleBody"><h1 id="NIO">NIO</h1><h2 id="NIO_简介">NIO 简介</h2><p>  nio 是New IO 的简称，在jdk1.4 里提供的新api 。Sun 官方标榜的特性如下： 为所有的原始类型提供(Buffer)缓存支持。字符集编码解码解决方案。 Channel ：一个新的原始I/O 抽象。 支持锁和内存映射文件的文件访问接口。 提供多路(non-bloking) 非阻塞式的高伸缩性网络I/O 。                 – 摘抄<a href="http://baike.baidu.com/link?url=0RUl92U3LPlc5CgZbBAqVtjxbkH-esxau7LX6iEWLtUBESNf7xuDuTbRJ8A3Ruf0LlD_i25c1Bt3N2r_RnMH9zDzqaZ3bgMmMLitEQ8qYfhk_2ZRqmvJW5-gtskoZDi7w9BO7mdHxXybb3KekHpul_" target="_blank" rel="external">百度百科</a></p>
+<h2 id="代码">代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.RandomAccessFile;</span><br><span class="line"><span class="keyword">import</span> java.nio.ByteBuffer;</span><br><span class="line"><span class="keyword">import</span> java.nio.channels.FileChannel;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NIO</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> bufSize = <span class="number">1000000</span>;<span class="comment">//一次读取的字节长度</span></span><br><span class="line">    File fin = <span class="keyword">new</span> File(<span class="string">"D:\\test\\readFile.txt"</span>);<span class="comment">//读取的文件</span></span><br><span class="line">    File fout = <span class="keyword">new</span> File(<span class="string">"D:\\test\\writeFile.txt"</span>);<span class="comment">//写出的文件</span></span><br><span class="line">    Date startDate = <span class="keyword">new</span> Date();</span><br><span class="line">    FileChannel fcin = <span class="keyword">new</span> RandomAccessFile(fin, <span class="string">"r"</span>).getChannel();</span><br><span class="line">    ByteBuffer rBuffer = ByteBuffer.allocate(bufSize);</span><br><span class="line"></span><br><span class="line">    FileChannel fcout = <span class="keyword">new</span> RandomAccessFile(fout, <span class="string">"rws"</span>).getChannel();</span><br><span class="line">    ByteBuffer wBuffer = ByteBuffer.allocateDirect(bufSize);</span><br><span class="line"></span><br><span class="line">    readFileByLine(bufSize, fcin, rBuffer, fcout, wBuffer);</span><br><span class="line">    Date endDate = <span class="keyword">new</span> Date();</span><br><span class="line">    </span><br><span class="line">    System.out.print(startDate+<span class="string">"|"</span>+endDate);<span class="comment">//测试执行时间</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">readFileByLine</span><span class="params">(<span class="keyword">int</span> bufSize, FileChannel fcin,</span><br><span class="line">      ByteBuffer rBuffer, FileChannel fcout, ByteBuffer wBuffer)</span> </span>&#123;</span><br><span class="line">    String enterStr = <span class="string">"\n"</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">byte</span>[] bs = <span class="keyword">new</span> <span class="keyword">byte</span>[bufSize];</span><br><span class="line">      <span class="comment">//temp：由于是按固定字节读取，在一次读取中，第一行和最后一行经常是不完整的行，因此定义此变量来存储上次的最后一行和这次的第一行的内容，</span></span><br><span class="line">      <span class="comment">//并将之连接成完成的一行，否则会出现汉字被拆分成2个字节，并被提前转换成字符串而乱码的问题，数组大小应大于文件中最长一行的字节数</span></span><br><span class="line">      <span class="keyword">byte</span>[] temp = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">500</span>];</span><br><span class="line">      <span class="keyword">while</span> (fcin.read(rBuffer) != -<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> rSize = rBuffer.position();</span><br><span class="line">        rBuffer.rewind();</span><br><span class="line">        rBuffer.get(bs);</span><br><span class="line">        rBuffer.clear();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//windows下ascii值13、10是换行和回车，unix下ascii值10是换行</span></span><br><span class="line">        <span class="comment">//从开头顺序遍历，找到第一个换行符</span></span><br><span class="line">        <span class="keyword">int</span> startNum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> length=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;rSize;i++)&#123;</span><br><span class="line">          <span class="keyword">if</span>(bs[i]==<span class="number">10</span>)&#123;<span class="comment">//找到换行字符</span></span><br><span class="line">            startNum=i;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">500</span>;k++)&#123;</span><br><span class="line">              <span class="keyword">if</span>(temp[k]==<span class="number">0</span>)&#123;<span class="comment">//temp已经存储了上一次读取的最后一行，因此遍历找到空字符位置，继续存储此次的第一行内容，连接成完成一行</span></span><br><span class="line">                length=i+k;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=i;j++)&#123;</span><br><span class="line">                  temp[k+j]=bs[j];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//将拼凑出来的完整的一行转换成字符串</span></span><br><span class="line">        String tempString1 = <span class="keyword">new</span> String(temp, <span class="number">0</span>, length+<span class="number">1</span>, <span class="string">"GBK"</span>);</span><br><span class="line">        <span class="comment">//清空temp数组</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;temp.length;i++)&#123;</span><br><span class="line">          temp[i]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//从末尾倒序遍历，找到第一个换行符</span></span><br><span class="line">        <span class="keyword">int</span> endNum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=rSize-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">          <span class="keyword">if</span>(bs[i]==<span class="number">10</span>)&#123;</span><br><span class="line">            endNum=i;<span class="comment">//记录最后一个换行符的位置</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;rSize;j++)&#123;</span><br><span class="line">              temp[k++]=bs[j];<span class="comment">//将此次读取的最后一行的不完整字节存储在temp数组，用来跟下一次读取的第一行拼接成完成一行</span></span><br><span class="line">              bs[j]=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//去掉第一行和最后一行不完整的，将中间所有完整的行转换成字符串</span></span><br><span class="line">        String tempString2 = <span class="keyword">new</span> String(bs, startNum+<span class="number">1</span>, endNum-startNum, <span class="string">"GBK"</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//拼接两个字符串</span></span><br><span class="line">        String tempString = tempString1 + tempString2;</span><br><span class="line"><span class="comment">//        System.out.print(tempString);</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> fromIndex = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> endIndex = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> ((endIndex = tempString.indexOf(enterStr, fromIndex)) != -<span class="number">1</span>) &#123;</span><br><span class="line">          String line = tempString.substring(fromIndex, endIndex)+enterStr;<span class="comment">//按行截取字符串</span></span><br><span class="line">          System.out.print(line);</span><br><span class="line">          <span class="comment">//写入文件</span></span><br><span class="line">          writeFileByLine(fcout, wBuffer, line);</span><br><span class="line"></span><br><span class="line">          fromIndex = endIndex + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">      e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span><br><span class="line">   * 写到文件上</span><br><span class="line">   * <span class="doctag">@param</span> fcout</span><br><span class="line">   * <span class="doctag">@param</span> wBuffer</span><br><span class="line">   * <span class="doctag">@param</span> line</span><br><span class="line">   */</span></span><br><span class="line">  <span class="annotation">@SuppressWarnings</span>(<span class="string">"static-access"</span>)</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeFileByLine</span><span class="params">(FileChannel fcout, ByteBuffer wBuffer, String line)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      fcout.write(wBuffer.wrap(line.getBytes(<span class="string">"UTF-8"</span>)), fcout.size());</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">      e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</span>
       
     </div>
 
@@ -342,9 +322,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/WordCloud/" rel="tag">WordCloud</a>
+            <a href="/tags/NIO/" rel="tag">NIO</a>
           
-            <a href="/tags/javascript/" rel="tag">javascript</a>
+            <a href="/tags/java/" rel="tag">java</a>
           
         </div>
       
@@ -353,12 +333,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2015/12/23/我的阅历/" rel="next" title="我的阅历">
+                <i class="fa fa-chevron-left"></i> 我的阅历
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/04/Swig-模版教程/" rel="prev" title="Swig 模版教程">
-                Swig 模版教程 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/05/09/在线工具列表/" rel="prev" title="在线工具列表">
+                在线工具列表 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -375,23 +359,23 @@
       <div style="margin:0px auto; padding-left:23px; text-align:center;">
         <script type="text/javascript" id="wumiiRelatedItems"></script>
         <script type="text/javascript">
-        var wumiiPermaLink = "http://imjun.me/2015/12/03/beautiful-word-cloud/"; //请用代码生成文章永久的链接
+        var wumiiPermaLink = "http://imjun.me/2016/04/12/nio文件读写操作/"; //请用代码生成文章永久的链接
         var global_tags = [];
         
           
-          global_tags.push('WordCloud');
+          global_tags.push('NIO');
           
-          global_tags.push('javascript');
+          global_tags.push('java');
           
         
         var categories = [];
          
           
-          categories.push('前端');
+          categories.push('java');
           
         
         wumiiTags = global_tags.join(',');
-        var wumiiTitle = "简单美观的文字标签云组件"; //请用代码生成文章标题
+        var wumiiTitle = "nio文件读写操作"; //请用代码生成文章标题
         // wumiiTags =; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
         var wumiiCategories = categories;
         //var wumiiCategories = [[object Object]]; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
@@ -409,10 +393,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2015/12/03/beautiful-word-cloud/"
-     data-title="简单美观的文字标签云组件"
+        <div class="ds-share flat" data-thread-key="2016/04/12/nio文件读写操作/"
+     data-title="nio文件读写操作"
      data-content=""
-     data-url="http://imjun.me/2015/12/03/beautiful-word-cloud/">
+     data-url="http://imjun.me/2016/04/12/nio文件读写操作/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -449,8 +433,8 @@
     </blockquote>
     <ul class="ds-recent-visitors" data-num-items="36" data-avatar-size="30" id="ds-recent-visitors">
     </ul>  
-      <div class="ds-thread ds-thread-count" data-thread-key="2015/12/03/beautiful-word-cloud/"
-           data-title="简单美观的文字标签云组件" data-url="http://imjun.me/2015/12/03/beautiful-word-cloud/" >
+      <div class="ds-thread ds-thread-count" data-thread-key="2016/04/12/nio文件读写操作/"
+           data-title="nio文件读写操作" data-url="http://imjun.me/2016/04/12/nio文件读写操作/" >
 
       </div>
      
@@ -616,7 +600,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NIO"><span class="nav-number">1.</span> <span class="nav-text">NIO</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NIO_简介"><span class="nav-number">1.1.</span> <span class="nav-text">NIO 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.2.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
