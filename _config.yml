@@ -44,7 +44,7 @@ highlight:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://imjun.me
+url: http://liushaojun.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -107,7 +107,7 @@ tag_generator:
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: next #modernist
+theme: indigo #modernist
 
 
 # MathJax Support

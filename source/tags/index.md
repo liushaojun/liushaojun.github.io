@@ -1,4 +1,3 @@
-title: All tags
-date: {{ date }}
-type: tags
+layout: tags
+comments: false
 ---
