@@ -29,7 +29,7 @@ social_icons:
   Email: envelope
   ZhiHu: zhihu
 social:
-  GitHub: http://github.com/liushaojun
+  GitHub: https://github.com/liushaojun
   Twitter: your-twitter-url
   Weibo: http://www.weibo.com/imshaojun
   # DouBan: your-douban-url
@@ -44,7 +44,7 @@ highlight:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://liushaojun.github.io
+url: https://liushaojun.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
