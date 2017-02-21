@@ -72,16 +72,16 @@ zk 采用两种方式相结合
     
 ## master选举
 **架构图**:
-![](https://dn-imjun.qbox.me/2016-07-25 11-10-26.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-10-26.jpg)
 **程序流程图:**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-11-03.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-11-03.jpg)
 **网络抖动:**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-11-41.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-11-41.jpg)
 **核心类图:**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-12-08.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-12-08.jpg)
 
 master 节点何时会删除
 
@@ -353,16 +353,16 @@ public class WorkServer {
 ```
 ## 发布/订阅
 **架构图:**
-![](https://dn-imjun.qbox.me/2016-07-25 11-17-16.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-17-16.jpg)
 **Manga Server 流程图:**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-17-48.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-17-48.jpg)
 **WorkServer 流程图:**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-18-27.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-18-27.jpg)
 **系统核心类图:**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-19-14.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-19-14.jpg)
 **代码:**
 ``` java
 package com.shaojun.zookeeper.subscribe;
@@ -739,28 +739,28 @@ public class WorkServer {
 
 **架构图**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-24-14.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-24-14.jpg)
 **客户端流程**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-24-37.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-24-37.jpg)
 **服务端主体流程图**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-25-00.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-25-00.jpg)
 **Server 核心类图**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-25-18.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-25-18.jpg)
 **代码结构:**
 **客户端**
-![](https://dn-imjun.qbox.me/2016-07-25 11-26-25.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-26-25.jpg)
 **服务端**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-26-59.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-26-59.jpg)
 
 ## 命名服务
 **架构图**
-![](https://dn-imjun.qbox.me/2016-07-25 11-30-32.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-30-32.jpg)
 **核心算法**
-![](https://dn-imjun.qbox.me/2016-07-25 11-30-51.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-30-51.jpg)
 **代码**
 ``` java
 package com.shaojun.zookeeper.nameservice;
@@ -919,11 +919,11 @@ public class TestIdMaker {
 ```
 ## 分布式队列
 **架构图**
-![](https://dn-imjun.qbox.me/2016-07-25 11-31-24.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-31-24.jpg)
 **offer 核心算法**
-![](https://dn-imjun.qbox.me/2016-07-25 11-31-32.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-31-32.jpg)
 **poll 核心算法**
-![](https://dn-imjun.qbox.me/2016-07-25 11-31-40.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-31-40.jpg)
 **核心代码**
 **简单的队列**
 ``` java
@@ -1147,10 +1147,10 @@ public class TestDistributedBlockingQueue {
 ## 分布式锁
 **架构图**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-32-54.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-32-54.jpg)
 **核心算法流程图**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-33-12.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-33-12.jpg)
 **全局事务锁的相关代码**
 
-![](https://dn-imjun.qbox.me/2016-07-25 11-41-10.jpg)
+![](https://dn-imjun.qbox.me/2016-07-25-11-41-10.jpg)
