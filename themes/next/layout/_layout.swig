@@ -10,7 +10,7 @@
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
   {% include '_third-party/analytics/index.swig' %}
-  <link href="/lib/music/css/music-hub.css" rel="stylesheet"/>
+  <!-- <link href="/lib/music/css/music-hub.css" rel="stylesheet"/> -->
 
 </head>
 
@@ -43,7 +43,7 @@
       </div>
     </main>
   
-    <div id="music_hub_content"></div>
+    <!-- <div id="music_hub_content"></div> -->
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
@@ -86,7 +86,7 @@
   {% include '_third-party/exturl.swig' %}
 
 
-<script src="/lib/music/js/music-hub.js" type="text/javascript"></script>
+<!-- <script src="/lib/music/js/music-hub.js" type="text/javascript"></script> -->
 
 </body>
 </html>
