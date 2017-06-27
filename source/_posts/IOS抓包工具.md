@@ -6,6 +6,7 @@ tags: [ ios , "https" ]
 
 >在iOS开发过程中，抓包是常见的必备技能之一。这里我们主要介绍一下Mac下的抓包利器Charles（文中版本：4.0.1）。它可以非常方便的抓取Http/Https请求，从而提高我们的开发效率。本文中不提供破解版安装使用说明（网上一大堆），建议使用正版，官方dmg下载地址：[Charlesproxy](https://www.chrelesproxy.com/download/)
 
+<!-- more -->
 破解版:
 [Charlesproxy](http://www.waitsun.com/chreles-4-0-2.html)
 
