@@ -3,8 +3,8 @@ author: Shaojun Liu
 tags:
   - mongodb
 categories:
-  - mongodb
-  - db
+  - DB
+  - Mongo DB
 date: 2017-08-02 18:43:00
 ---
 
