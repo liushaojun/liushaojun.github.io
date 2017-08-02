@@ -1,14 +1,15 @@
 title: IOS抓包工具
-date: 2016-11-23 11:52:52
-categories: 工具
-tags: [ ios , "https" ]
+categories:
+  - 工具
+tags:
+  - https
+  - ios
+date: 2016-11-23 11:52:00
 ---
-
 >在iOS开发过程中，抓包是常见的必备技能之一。这里我们主要介绍一下Mac下的抓包利器Charles（文中版本：4.0.1）。它可以非常方便的抓取Http/Https请求，从而提高我们的开发效率。本文中不提供破解版安装使用说明（网上一大堆），建议使用正版，官方dmg下载地址：[Charlesproxy](https://www.chrelesproxy.com/download/)
 
 <!-- more -->
-破解版:
-[Charlesproxy](http://www.waitsun.com/chreles-4-0-2.html)
+破解版:http://charles.iiilab.com)
 
 ## 如何抓取Http请求？
 
@@ -49,7 +50,8 @@ __温馨提示__：抓完包之后，请把手机WiFi中的HTTP代理关闭。�
 
 请确保手机已经设置好手动代理（具体方式参照上面HTTP抓包设置方式）。
 
-在手机Safari浏览器中输入下面的链接地址：`http://chrelesproxy.com/getssl`。手机会自动跳转安装“Charles Proxy SSL Proxying”描述文件。如下图所示：
+在手机Safari浏览器中输入下面的链接地址：
+[Charles Proxy](http://charlesproxy.com/getssl)。手机会自动跳转安装“Charles Proxy SSL Proxying”描述文件。如下图所示：
 ![](https://dn-imjun.qbox.me/chreles8.jpg)
 点击“安装”按钮，会提示输入手机密码，然后确认安装。
 ![](https://dn-imjun.qbox.me/chreles9.jpg)
@@ -76,7 +78,7 @@ __温馨提示__：抓完包之后，请把手机WiFi中的HTTP代理关闭。�
 ![](https://dn-imjun.qbox.me/chreles14.jpg)
 
 
-针对Charles代理访问https有些正常有些失败的处理方法（一般https只要打开chreles 的”Enable SSL Proxying”代理就能访问）
+针对Charles代理访问https有些正常有些失败的处理方法（一般https只要打开charles 的”Enable SSL Proxying”代理就能访问）
 
 ## 如果没有Wifi，我们还可以这样抓包？（本文不做详解）
 
@@ -87,6 +89,3 @@ __温馨提示__：抓完包之后，请把手机WiFi中的HTTP代理关闭。�
 
 2. 抓包之tcpdump方式
 有个很大的缺点是手机需要越狱。
-
-
-

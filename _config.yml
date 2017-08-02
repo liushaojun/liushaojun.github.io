@@ -78,6 +78,7 @@ admin:
   username: admin
   password_hash: $2a$10$3zqk5WsLJcJaq9hRirUKKO4AFGpjW5IZqm8GXt3NtS66rqGpUDWXq
   secret: brook
+  deployCommand: ./deploy.sh
 
 
 search:
