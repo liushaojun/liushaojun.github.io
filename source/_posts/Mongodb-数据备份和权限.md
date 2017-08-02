@@ -1,11 +1,11 @@
-title: Mongodb 权限和数据备份
+title: Mongodb 数据备份和权限
 author: Shaojun Liu
 tags:
   - mongodb
 categories:
-  - DB
   - Mongo DB
-date: 2017-08-02 18:43:00
+  - db
+date: 2017-08-02 18:57:00
 ---
 
 
@@ -27,7 +27,7 @@ mongoexport -d <db> -c <table> -q ‘{“name”:{$ne:null}}’ -o <path>.json
 ```
 ## 单表导入
 
-``` bash
+``` bash?linenums
 mongoimport —host 127.0.0.1:27017 -d <db> -c <table> <path>.json
 ```
 ## 数据清空
@@ -57,7 +57,7 @@ db.auth('admin','admin')
 ```
 ### 某个库的用户
 
-``` javascript
+``` javascript?linenums
 
 // 在设置某个数据库的时候，先执行授权
 use admin;

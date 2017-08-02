@@ -2,9 +2,9 @@ title: Mongodb 教程
 author: Shaojun Liu
 tags:
   - mongodb
+  - db
 categories:
   - Mongo DB
-  - DB
 date: 2017-08-02 15:14:00
 ---
 ## 简介
