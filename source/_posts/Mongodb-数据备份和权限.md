@@ -7,8 +7,6 @@ categories:
   - db
 date: 2017-08-02 18:57:00
 ---
-
-
 ## 数据导出
 
 ``` bash
@@ -57,7 +55,7 @@ db.auth('admin','admin')
 ```
 ### 某个库的用户
 
-``` javascript?linenums
+``` javascript
 
 // 在设置某个数据库的时候，先执行授权
 use admin;
