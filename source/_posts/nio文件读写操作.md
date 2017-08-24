@@ -4,11 +4,11 @@ categories: java
 tags: [ java , NIO]
 ---
 
-# NIO
-
 ##  NIO 简介
 
-  nio 是New IO 的简称，在jdk1.4 里提供的新api 。Sun 官方标榜的特性如下： 为所有的原始类型提供(Buffer)缓存支持。字符集编码解码解决方案。 Channel ：一个新的原始I/O 抽象。 支持锁和内存映射文件的文件访问接口。 提供多路(non-bloking) 非阻塞式的高伸缩性网络I/O 。                 -- 摘抄[百度百科](http://baike.baidu.com/link?url=0RUl92U3LPlc5CgZbBAqVtjxbkH-esxau7LX6iEWLtUBESNf7xuDuTbRJ8A3Ruf0LlD_i25c1Bt3N2r_RnMH9zDzqaZ3bgMmMLitEQ8qYfhk_2ZRqmvJW5-gtskoZDi7w9BO7mdHxXybb3KekHpul_)
+>nio 是New IO 的简称，在jdk1.4 里提供的新api 。Sun 官方标榜的特性如下： 为所有的原始类型提供(Buffer)缓存支持。字符集编码解码解决方案。 Channel ：一个新的原始I/O 抽象。 支持锁和内存映射文件的文件访问接口。 提供多路(non-bloking) 非阻塞式的高伸缩性网络I/O 。                 -- 摘抄[百度百科](http://baike.baidu.com/link?url=0RUl92U3LPlc5CgZbBAqVtjxbkH-esxau7LX6iEWLtUBESNf7xuDuTbRJ8A3Ruf0LlD_i25c1Bt3N2r_RnMH9zDzqaZ3bgMmMLitEQ8qYfhk_2ZRqmvJW5-gtskoZDi7w9BO7mdHxXybb3KekHpul_)
+
+<!-- more -->
 
 ## 代码
 
