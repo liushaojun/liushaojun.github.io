@@ -3,7 +3,7 @@ author: Shaojun Liu
 tags:
   - mongodb
 categories:
-  - Mongo DB
+  - MongoDB
   - db
 date: 2017-08-02 18:57:00
 ---

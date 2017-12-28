@@ -4,7 +4,7 @@ tags:
   - mongodb
   - db
 categories:
-  - Mongo DB
+  - MongoDB
 date: 2017-08-02 15:14:00
 ---
 
