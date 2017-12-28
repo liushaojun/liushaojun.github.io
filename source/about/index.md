@@ -1,36 +1,27 @@
-title: about
 date: {{ date }}
 ---
-# Me
-Name： 　__Brook  \| 刘少君 __
-Home：　  BeiJing- China
-Tags：　   音乐 \| 北漂 \| 攻城狮
-<blockquote class="blockquote-center">Too young,too naive.</blockquote>
+### 关于我
+- 从事 WEB 开发, 主要语言 Java,熟练使用 `Spring`、`Spring Boot`、`MyBatis` 和`JPA`等主流框架。
+- 对微服务有所了解，熟悉`Spring Cloud`。
+- 其他了解 `NodeJs`,`Python` 等技术。
+- 综合代码狂热症。
 
-------
-# Links
+热爱`技术`，喜欢`开源`，追求`新事物`。
 
-## Code
-- [Github](https://github.com/liushaojun)
+### 工作
+城市: `北京`
 
-## Zones
-- [网易云音乐](http://music.163.com/#/user/home?id=71254210)
+### 学习
+人生的道路上，就是不断的充实自己... ...
+进击`(Python)人工智能`
 
-## SNS
-- Gmail：　  　[liu785029095@gmail.com](mailTo:liu785029095@gmail.com)
-- 知乎：　　　[@若风](http://www.zhihu.com/people/liu-shao-jun-14)
-- WeChat：　   <a href="javascript:;" target="_top" onclick="$('#qr_code').toggle('slow');$('#qr_code_tip').toggle();"> @Brook</a> <span id="qr_code_tip"  style="display:none;color:red;margin-left:10px"><strong>Scan QR Code</strong> <i class="fa fa-arrow-down"></i></span>
+### 人生格言
+思想决定行为，行为决定习惯，习惯决定性格，性格决定命运。 ------ 杰克·霍吉
+### 爱好
+喜欢 `台球`、`户外旅行`。
 
----
-## Show
-<div id='qr_code' style="display:none">
-    ![@Kevin](/images/me_wechat.png)
-</div>
-------
-## 听听音乐，轻松一下
-<embed src="http://music.163.com/style/swf/widget.swf?sid=29803675&type=2&auto=0&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed>
-------
-博客基于Next主题修改，感谢Next主题的作者。
-博客源码已共享在我的[Github](https://github.com/liushaojun/liushaojun.github.io)中,欢迎 **FOLLOW**。
-
+### 联系我
+* Home: [赶路人](https://ganlu.ren)
+* Email: liu785029095@gmail.com
+* GitHub: [MinHow](https://github.com/liushaojun)
 

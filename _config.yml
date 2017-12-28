@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Brook's Blog
-subtitle: 一个逼格的程序猿、码农。
+title: 赶路人
+subtitle: 我不知道将去何方，但我已在路上。
 description: "用心关注 细心聆听 努力做好每一天"
 keywords: "IT,java,node,前端,HTML5,javascript,音乐"
 author: Shaojun Liu
@@ -22,7 +22,7 @@ counter: true
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://liushaojun.github.io
+url: http://ganlu.ren
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -36,6 +36,11 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -56,9 +61,6 @@ highlight:
 default_category: uncategorized
 category_map:
 tag_map:
-  archive: 1
-  category: 1
-  tag: 1
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -67,19 +69,14 @@ tag_map:
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
-
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: next #modernist
-
-# hexo-admin authentification
-admin:
-  username: admin
-  password_hash: $2a$10$3zqk5WsLJcJaq9hRirUKKO4AFGpjW5IZqm8GXt3NtS66rqGpUDWXq
-  secret: brook
-  deployCommand: ./deploy.sh
-
+theme: miho #modernist
 
 search:
   path: search.xml
@@ -130,52 +127,7 @@ facebook_sdk:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 #
-#Plugins
-plugins:
-- hexo-generator-feed
-- hexo-generator-sitemap
-#feed sitemap
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-  hub:
-sitemap:
-  path: sitemap.xml
-
-plugins:
-  - hexo-qiniu-sync
-
-# #七牛云存储设置
-# ##offline       是否离线. 离线状态将使用本地地址渲染
-# ##sync          是否同步
-# ##bucket        空间名称.
-# ##access_key    上传密钥AccessKey
-# ##secret_key    上传密钥SecretKey
-# ##dirPrefix     上传的资源子目录前缀.如设置，需与urlPrefix同步 
-# ##urlPrefix     外链前缀. 
-# ##local_dir     本地目录.
-# ##update_exist  是否更新已经上传过的文件(仅文件大小不同或在上次上传后进行更新的才会重新上传)
-# ##image/js/css  子参数folder为不同静态资源种类的目录名称，一般不需要改动
-# ##image.extend  这是个特殊参数，用于生成缩略图或加水印等操作。具体请参考http://developer.qiniu.com/docs/v6/api/reference/fop/image/ 
-# ##              可使用基本图片处理、高级图片处理、图片水印处理这3个接口。例如 ?imageView2/2/w/500 即生成宽度最多500px的缩略图
-qiniu:
-  offline: false
-  sync: true
-  bucket: static
-  access_key: FVuAO6TmCXOaEoGl1-CMou5_FVQTOORXLajqnzIO
-  secret_key: nEswfz9MPBRSQPfYm-mW-xc_ZgMdq_1kQee8Pr6L
-  dirPrefix: static
-  urlPrefix: https://dn-imjun.qbox.me/
-  local_dir: static
-  update_exist: true
-  image: 
-    folder: images
-    extend: -wm
-  js:
-    folder: js
-  css:
-    folder: css
+#
 deploy:
   type: git
   repository: 
