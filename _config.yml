@@ -153,6 +153,5 @@ deploy:
   type: git
   repository: 
     github: https://github.com/liushaojun/liushaojun.github.io.git,master
-    gitcafe: https://git.coding.net/ishaojun/brook.git,coding-pages
     oschina: https://git.oschina.net/liushaojun/liushaojun.git,master
 

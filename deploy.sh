@@ -7,5 +7,5 @@ INPUT_MESSAGE=$1
 COMMIT_MESSAGE=${INPUT_MESSAGE:-$MESSAGE}
 echo $COMMIT_MESSAGE
 git add -A .
-git commit -m COMMIT_MESSAGE
+git commit -m $COMMIT_MESSAGE
 git push origin hexo-source
