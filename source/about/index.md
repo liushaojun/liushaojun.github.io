@@ -1,4 +1,8 @@
-date: {{ date }}
+---
+title: about
+type: "about"
+layout: "about"
+---
 ---
 ### 关于我
 - 从事 WEB 开发, 主要语言 Java,熟练使用 `Spring`、`Spring Boot`、`MyBatis` 和`JPA`等主流框架。

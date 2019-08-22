@@ -1,5 +1,6 @@
 title: Mongodb 教程
 author: Shaojun Liu
+top: true
 tags:
   - mongodb
   - db

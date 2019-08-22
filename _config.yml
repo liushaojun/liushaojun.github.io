@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 赶路人
-subtitle: 我不知道将去何方，但我已在路上。
-description: "用心关注 细心聆听 努力做好每一天"
-keywords: "IT,java,node,前端,HTML5,javascript,音乐"
-author: Shaojun Liu
+title: 码匠先生
+subtitle: 码匠先生
+description: "人生百态，码于心中。"
+keywords: "java,node,Spring,大数据,javascript"
+author: 码匠先生
 email: me@imjun.me
-language: zh-Hans
+language: zh-CN
 timezone:
 favicon: /favicon.ico
 # 站点起始时间
@@ -22,7 +22,7 @@ counter: true
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://ganlu.ren
+url: https://liushaojun.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -53,15 +53,30 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: true
   tab_replace:
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'tomorrow'
+  line_number: false    # default false
+  custom_css:    
 # Category & Tag
 default_category: uncategorized
 category_map:
 tag_map:
 
+permalink_pinyin:
+  enable: true
+  separator: '-'  
+
+wordCount:
+  enable: true # 将这个值设置为 true 即可.
+  postWordCount: true
+  min2read: true
+  totalCount: true  
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
@@ -76,7 +91,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: miho #modernist
+theme:  hexo-theme-matery #modernist
 
 search:
   path: search.xml
@@ -124,6 +139,12 @@ facebook_sdk:
   like_button:  #true
   webmaster:    #true
 
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 #
