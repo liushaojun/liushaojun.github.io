@@ -1,5 +1,5 @@
 #!/bin/bash
-hexo deploy -g 2>&1
+hexo clean && hexo deploy -g 2>&1
 echo "[INFO] deploy successfully!!!"
 echo "[INFO] push github"
 MESSAGE="博客更新:`date "+%Y-%m-%d %H:%M:%S"`"
