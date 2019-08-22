@@ -1,0 +1,30 @@
+
+        <div class="container">
+            <h1>WTF,404了 <span>:(</span></h1>
+            <p>你似乎来到了没有知识存在的荒原...</p>
+            <p>请<a href="/" title="首页" target="_blank">返回首页</a></p>
+        </div>
+    
+
+
+
+  
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
