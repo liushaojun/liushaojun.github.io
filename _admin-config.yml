@@ -3,3 +3,11 @@ admin:
   password_hash: $2a$10$3zqk5WsLJcJaq9hRirUKKO4AFGpjW5IZqm8GXt3NtS66rqGpUDWXq
   secret: brook
   deployCommand: ./deploy.sh
+options:
+  lineNumbers: true
+  spellcheck: true
+  imagePrefix: ''
+editor:
+  lineNumbers: true
+  inputStyle: contenteditable
+  spellcheck: true
